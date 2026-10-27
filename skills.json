@@ -2,11 +2,10 @@
   {
     "id": "1",
     "title": "Understand dispensing workflow",
-    "category": "Dashboard workflow",
+    "category": "Pharmacy X",
     "text": "Follow the prescription from electronic arrival, pharmacist clinical check and in-stock pick list through the named basket, dispensing, any required accuracy check, packaging and patient notification. Understand the Pharmacy X dashboard and how it relates to the dispensing workflow.",
     "guide": "Verwood_Dashboard_Workflow.pdf",
     "topics": [
-      "Dashboard workflow",
       "Pharmacy X"
     ],
     "type": "skill"
@@ -14,22 +13,22 @@
   {
     "id": "3",
     "title": "One basket, one patient",
-    "category": "Safe dispensing",
+    "category": "Pharmacy X",
     "text": "Complete one patient basket before starting another routine task. If interrupted, secure the basket and leave a clear status handover. Keep the bench tidy. Coordinate scanning with colleagues. Prioritise ready baskets nearby unless clinical urgency or an agreed priority takes precedence.",
     "guide": "Pharmacy_Workflow_Key_Reminders.pdf",
     "topics": [
-      "Safe dispensing"
+      "Pharmacy X"
     ],
     "type": "skill"
   },
   {
     "id": "5",
     "title": "Accuracy-check handover",
-    "category": "Safe dispensing",
+    "category": "Pharmacy X",
     "text": "Identify baskets awaiting accuracy checks and keep checked and unchecked items separate. Work within your role. When a controlled drug or refrigerated item requires an ACT check, tell the relevant colleague directly and identify the item. Follow the current SOP.",
     "guide": "Pharmacy_Workflow_Key_Reminders.pdf",
     "topics": [
-      "Safe dispensing"
+      "Pharmacy X"
     ],
     "type": "skill"
   },
@@ -58,33 +57,33 @@
   {
     "id": "8",
     "title": "Package securely and add notices",
-    "category": "Packaging and labels",
+    "category": "Pharmacy X",
     "text": "Choose a secure bag without crushing packs. Separate refrigerated, bulky or fragile items appropriately. Seal the top with the patient information label and relevant notices, including exemptions, blood pressure service, refrigerated items or owing items. Pause to check patient, medicine, label and package.",
     "guide": "label guide.pdf",
     "topics": [
-      "Packaging and labels"
+      "Pharmacy X"
     ],
     "type": "skill"
   },
   {
     "id": "9",
     "title": "Collection, Med Point and delivery labels",
-    "category": "Packaging and labels",
+    "category": "Pharmacy X",
     "text": "Use page 2 of the original illustrated guide. Counter collection: patient details at the bottom. Med Point: QR code at the corner of the triangle, not in the centre of the bottom section. Delivery: delivery QR and patient details at the bottom; avoid placing two QR codes together at the bottom.",
     "guide": "label guide.pdf",
     "topics": [
-      "Packaging and labels"
+      "Pharmacy X"
     ],
     "type": "skill"
   },
   {
     "id": "10",
     "title": "Print or reprint the dispensing token",
-    "category": "Packaging and labels",
+    "category": "Pharmacy X",
     "text": "For Print rx, Print script, Reprint or Print DT labels: open the patient page, scroll to All Prescriptions, choose View for the relevant prescription, then print/reprint DT. Cut off the left side into confidential waste and place the right side inside the bag.",
     "guide": "label guide.pdf",
     "topics": [
-      "Packaging and labels"
+      "Pharmacy X"
     ],
     "type": "skill"
   },
@@ -271,10 +270,9 @@
   {
     "id": "new-porto-patient",
     "title": "Add and edit patient details in Pharmland Porto",
-    "category": "Pharmland Porto",
+    "category": "Pharmland Porto and Cliniko",
     "topics": [
-      "Pharmland Porto",
-      "Cliniko"
+      "Pharmland Porto and Cliniko"
     ],
     "text": "Use Pharmland Porto to add and edit patient details. Make sure the patient record includes:\n1. Full name\n2. Date of birth (DOB)\n3. Phone number\n4. Patient email address\n5. Home address\n6. NHS number\n7. Referring doctor\n\nPatient information is linked to Cliniko. Enter actual patient information in the approved patient system, not in this training record.",
     "type": "skill"
@@ -282,10 +280,9 @@
   {
     "id": "new-porto-appointment",
     "title": "Add and reschedule an appointment",
-    "category": "Pharmland Porto",
+    "category": "Pharmland Porto and Cliniko",
     "topics": [
-      "Pharmland Porto",
-      "Cliniko"
+      "Pharmland Porto and Cliniko"
     ],
     "text": "Learn how to add an appointment and reschedule an existing appointment in the appointment workflow.",
     "type": "skill"
@@ -293,10 +290,9 @@
   {
     "id": "new-porto-linked",
     "title": "Understand the Pharmland Porto / Cliniko link",
-    "category": "Pharmland Porto",
+    "category": "Pharmland Porto and Cliniko",
     "topics": [
-      "Pharmland Porto",
-      "Cliniko"
+      "Pharmland Porto and Cliniko"
     ],
     "text": "Understand that patient information in Pharmland Porto is linked to Cliniko. Use Pharmland Porto to add and edit patient details.",
     "type": "skill"
@@ -329,7 +325,7 @@
       "PharmSmart"
     ],
     "text": "Find and sign off the required SOPs under the Governance category in PharmSmart. A training sign-off here does not sign the SOP in PharmSmart.",
-    "type": "skill"
+    "type": "checklist"
   },
   {
     "id": "new-pharmsmart-functions",
@@ -340,5 +336,16 @@
     ],
     "text": "Know how PharmSmart is used to report misses / near misses and to log cleaning and expired stock.",
     "type": "skill"
+  },
+  {
+    "id": "new-account-sharing-consent",
+    "title": "Consent: do not share work accounts outside the company",
+    "category": "Account setup",
+    "topics": [
+      "Account setup"
+    ],
+    "text": "I agree not to share my work accounts or login details with anyone who is not from the company. Tick Done to record your agreement.",
+    "type": "checklist",
+    "requiresSelf": true
   }
 ]

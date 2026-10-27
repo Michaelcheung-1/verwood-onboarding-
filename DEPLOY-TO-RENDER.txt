@@ -1,4 +1,6 @@
-VERWOOD PHARMACY - ONLINE ONBOARDING - VERSION 3.0
+For an existing installation, read UPDATE-4-1-INSTRUCTIONS.txt first.
+
+VERWOOD PHARMACY - ONLINE ONBOARDING - VERSION 4.0.1
 
 THIS PACKAGE IS READY TO UPLOAD. IT IS NOT A LIVE WEBSITE YET.
 Use a NEW repository, NEW Render web service and NEW persistent disk. Do not use or modify Delivery Desk's repository, service, accounts or disk.
@@ -56,7 +58,7 @@ PART 5 - REQUIRED PERSISTENCE CHECK BEFORE REAL USE
 6. Only start using real team records after these checks pass. Local test results cannot prove a Render disk survives a real redeploy.
 
 MANAGERS AND ADMINISTRATORS
-Dashboard opens with topic progress. Managers and administrators can select any person. Manage topics creates and renames shared topics; Edit content & topics assigns one or more topics to each item. Account setup uses Done / Not done. Other skills use recommended learning steps.
+Dashboard opens with topic progress. Managers and administrators can select any person. Manage topics creates and renames shared topics; Edit content & topics assigns one or more topics to each item. Account setup and PharmSmart SOP completion use Done / Not done. All learning items have stable searchable numbers. Other skills use recommended learning steps.
 Team records shows every staff member, including archived accounts. Use View full learning record to read shared learning, personal entries, notes, sign-offs and recorded actors/dates. Use View history for that person's activity. Print record prints the selected person's learning. The Learning screen also has a person selector.
 Staff can view their own records only; server permissions enforce this. Managers and administrators can review everyone's records, add shared content and record team progress. Managers manage staff accounts. Administrators also manage higher-role accounts and full backups.
 Everyone can sign off any recommended step on their own record, in any order. Colleague names are optional. Independent working counts as signed off even if earlier steps are unsigned.

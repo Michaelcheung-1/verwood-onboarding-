@@ -1,0 +1,34 @@
+VERWOOD ONBOARDING - FULL ONLINE UPDATE 4.0.1
+
+WHAT CHANGED
+1. Topics with no assigned active learning items are removed from the saved topic catalogue when this update first runs. Topic names and assignments that have items are kept. The dashboard hides empty topics. Managers/administrators can also use Manage topics > Delete empty topic later. A topic that still has assigned items cannot be deleted with this control.
+2. Sign off SOPs in PharmSmart now uses Done / Not done. If independent working was previously signed off for that item, it remains Done after the update. Earlier step notes, actors and history are retained in storage and backups.
+3. Account setup gains: Consent: do not share work accounts outside the company. Wording: I agree not to share my work accounts or login details with anyone who is not from the company. The new consent automatically follows the account-setup topic name already saved in the site if you renamed it. The account holder ticks Done; managers and administrators can view the status but cannot agree for someone else.
+4. Every item has a stable reference number such as #001. Search for 1 or #001 to open that exact item. The number appears beside the title, in the edit/sign-off dialog and in new history entries. It stays the same when titles/topics change and survives restart, updates and full backup/restore. New items receive new numbers; existing numbers are not reused. Manage topics > View numbered items opens that topic's content for editing.
+
+The built-in curriculum now has 34 items. Account setup has seven Done / Not done items. The PharmSmart SOP item is also Done / Not done. Other learning skills keep their unrestricted recommended steps.
+
+YOUR CURRENT BACKUP - CHECKED
+The current verwood-onboarding-backup.json is revision 13 and contains two accounts, nine shared content edits and no saved staff learning records. Its category changes were checked successfully. The earlier revision-2 file is no longer the basis for these instructions.
+The update preserves these topic assignments:
+- Dispensing workflow, one basket/one patient, accuracy-check handover, packaging, collection/delivery labels and dispensing-token printing are under Pharmacy X.
+- The three Pharmland Porto / Cliniko learning items use the single combined topic Pharmland Porto and Cliniko.
+- The empty Cliniko and Safe dispensing catalogue entries are removed.
+These category assignments are also included as the project's defaults, without copying accounts, password hashes or operational data into the ZIP. The original backup has not been modified. Compatibility checks confirmed that its account, record and history fields remain unchanged during the update.
+
+UPDATE AN EXISTING ONLINE SITE
+1. Sign in as administrator and download a NEW full backup of the current site before updating.
+2. Extract Verwood-Onboarding-Online-Update-4-1-Full.zip to a temporary folder.
+3. Open the extracted Verwood-Onboarding-Online folder. Upload ALL ITS CONTENTS into the SAME onboarding GitHub repository folder that already contains server.cjs, package.json and public. Replace matching application files. Include learning.cjs, storage.cjs and skills.json.
+   Correct: repository/server.cjs and repository/public/app.js
+   Wrong: repository/Verwood-Onboarding-Online/server.cjs
+   Do not upload a data folder, account file or backup JSON. Do not create a nested update folder.
+4. Commit the upload. In Render choose Manual Deploy > Deploy latest commit.
+5. Keep the SAME onboarding persistent disk, DATA_DIR=/var/lib/verwood-onboarding and APP_ORIGIN. Do not initialise again, attach a new disk or change any Delivery Desk settings.
+6. Sign in again and refresh the browser. Check your existing accounts, topic names, notes, sign-offs and the unchanged Storage ID. Confirm that empty topics are gone, items have numbers, the SOP item is a checkbox and account-sharing consent is present.
+7. Download a new full backup. The backup now includes stable item numbers and all existing accounts, topics, content, records and history.
+
+FIRST ONLINE INSTALLATION
+Use DEPLOY-TO-RENDER.txt if you have not yet created the separate onboarding GitHub repository and Render service. Verify persistent storage across a real redeploy before real use. The ZIP alone does not deploy or change a live website.
+
+Existing staff and manager accounts are preserved. Managers and administrators retain access to all staff records; staff see their own records only. This update does not modify Delivery Desk.

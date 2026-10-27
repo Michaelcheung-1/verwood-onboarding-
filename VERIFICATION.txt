@@ -1,7 +1,19 @@
-ONLINE VERSION 3.0 - PRE-DEPLOYMENT VERIFICATION
+ONLINE VERSION 4.0.1 - PRE-DEPLOYMENT VERIFICATION
 
 Passed automated application checks:
-- 33 curriculum items with six reversible Done / Not done account checkboxes.
+- Current revision-13 user backup inspected successfully in memory.
+- Nine shared topic assignments retained; Pharmacy X grouping and combined Pharmland Porto and Cliniko grouping match the backup.
+- Empty Cliniko and Safe dispensing entries removed; original backup file unchanged.
+- Current backup accounts, records and history unchanged during in-memory migration.
+- Downloadable project includes only sanitised topic assignments; no real accounts, password hashes or operational data.
+- Stable unique item numbers across edits, topic renaming, new items, restart and restore.
+- Duplicate item numbers rejected during backup validation.
+- Existing empty topic metadata removed; assigned topic names and records preserved.
+- Only empty topics can be removed through Manage topics.
+- Existing completed SOP sign-off carried into Done status with notes/history intact.
+- Account holder can record their own sharing consent; managers can view it.
+- Supplied backup inspected in memory: account, record and history fields unchanged; no private backup data saved into the project.
+- 34 curriculum items: seven account-setup checkboxes, a PharmSmart SOP checkbox and 26 step-based skills.
 - All supplied system training prompts, required patient fields and BH31* search tip included.
 - Manager topic creation/rename and multiple topic assignments per item.
 - Server-calculated topic completion and in-progress counts.
@@ -38,6 +50,7 @@ Production HTTP configuration tests using isolated local storage:
 Browser review:
 - Manager Team records lists all accounts.
 - Individual staff learning/history opens from Team records.
+- Search by item number opens the exact numbered content; SOP item is a Done / Not done checkbox.
 - Topic Dashboard opens after sign-in; Account setup appears first.
 - Account checkbox saves Done and updates overall/topic counts.
 - Content editor saves multiple checked topics without losing completion.
