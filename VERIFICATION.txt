@@ -1,6 +1,14 @@
-ONLINE VERSION 2.0 - PRE-DEPLOYMENT VERIFICATION
+ONLINE VERSION 3.0 - PRE-DEPLOYMENT VERIFICATION
 
 Passed automated application checks:
+- 33 curriculum items with six reversible Done / Not done account checkboxes.
+- All supplied system training prompts, required patient fields and BH31* search tip included.
+- Manager topic creation/rename and multiple topic assignments per item.
+- Server-calculated topic completion and in-progress counts.
+- Reassigning or renaming topics keeps sign-offs, notes and shared completion intact.
+- Multi-topic items count in each topic, once in the overall item count.
+- Existing single-topic databases migrate while retaining credentials and learning records.
+- Backups restore topics, assignments, checkbox status and step-based learning.
 - Private setup key and explicit first-time initialisation.
 - Manager and administrator access to all staff records, including personal learning, notes and sign-offs.
 - Staff see only their own accounts, learning records and personal content.
@@ -30,6 +38,9 @@ Production HTTP configuration tests using isolated local storage:
 Browser review:
 - Manager Team records lists all accounts.
 - Individual staff learning/history opens from Team records.
+- Topic Dashboard opens after sign-in; Account setup appears first.
+- Account checkbox saves Done and updates overall/topic counts.
+- Content editor saves multiple checked topics without losing completion.
 - Recommended sign-off buttons remain independently available.
 
 Not yet verified:

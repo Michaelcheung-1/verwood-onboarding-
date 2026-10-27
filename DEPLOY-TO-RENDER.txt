@@ -1,4 +1,4 @@
-VERWOOD PHARMACY - ONLINE ONBOARDING - VERSION 2.0
+VERWOOD PHARMACY - ONLINE ONBOARDING - VERSION 3.0
 
 THIS PACKAGE IS READY TO UPLOAD. IT IS NOT A LIVE WEBSITE YET.
 Use a NEW repository, NEW Render web service and NEW persistent disk. Do not use or modify Delivery Desk's repository, service, accounts or disk.
@@ -10,7 +10,7 @@ PART 2 - CREATE THE GITHUB REPOSITORY
 1. In GitHub, create a new PRIVATE repository called verwood-onboarding (or another new name).
 2. Extract Verwood-Onboarding-Online-Full.zip on your computer.
 3. Open the extracted Verwood-Onboarding-Online folder. Upload the CONTENTS of this folder to the TOP LEVEL of your new repository, then commit.
-4. Check placement: server.cjs, storage.cjs, package.json, skills.json, render.yaml and the public folder must sit at the repository's top level.
+4. Check placement: server.cjs, storage.cjs, learning.cjs, package.json, skills.json, render.yaml and the public folder must sit at the repository's top level.
    Correct: repository/server.cjs and repository/public/index.html
    Wrong: repository/Verwood-Onboarding-Online/server.cjs
    The ZIP deliberately contains no live database or passwords.
@@ -45,7 +45,7 @@ PART 4 - FIRST-TIME SETUP (EMPTY SITE ONLY)
 2. Enter your private SETUP_KEY and type INITIALISE. Enter your own full name, administrator username and a new password. No email address is required.
 3. Create the administrator, then sign in.
 4. In Render Environment, REMOVE INITIALISE_STORAGE and SETUP_KEY. Keep NODE_ENV, DATA_DIR and APP_ORIGIN. Save and deploy again. Setup is now closed; existing accounts remain.
-5. If moving offline records: open Backup & restore on the online site, choose your offline backup JSON, type RESTORE, and restore. This replaces the temporary online administrator and signs everyone out. Sign in with the administrator account FROM THE BACKUP. Do this before staff start using the online site. This is a full replacement, not a merge. Shared and personal learning, accounts, sign-offs and history are included.
+5. If moving offline records: open Backup & restore on the online site, choose your offline backup JSON, type RESTORE, and restore. This replaces the temporary online administrator and signs everyone out. Sign in with the administrator account FROM THE BACKUP. Do this before staff start using the online site. This is a full replacement, not a merge. Shared and personal learning, accounts, sign-offs, topics, topic assignments, checklist completion and history are included.
 
 PART 5 - REQUIRED PERSISTENCE CHECK BEFORE REAL USE
 1. As administrator, open Backup & restore. Storage checks must show persistent disk verified mounted and directory /var/lib/verwood-onboarding. Note the Storage ID.
@@ -56,6 +56,7 @@ PART 5 - REQUIRED PERSISTENCE CHECK BEFORE REAL USE
 6. Only start using real team records after these checks pass. Local test results cannot prove a Render disk survives a real redeploy.
 
 MANAGERS AND ADMINISTRATORS
+Dashboard opens with topic progress. Managers and administrators can select any person. Manage topics creates and renames shared topics; Edit content & topics assigns one or more topics to each item. Account setup uses Done / Not done. Other skills use recommended learning steps.
 Team records shows every staff member, including archived accounts. Use View full learning record to read shared learning, personal entries, notes, sign-offs and recorded actors/dates. Use View history for that person's activity. Print record prints the selected person's learning. The Learning screen also has a person selector.
 Staff can view their own records only; server permissions enforce this. Managers and administrators can review everyone's records, add shared content and record team progress. Managers manage staff accounts. Administrators also manage higher-role accounts and full backups.
 Everyone can sign off any recommended step on their own record, in any order. Colleague names are optional. Independent working counts as signed off even if earlier steps are unsigned.

@@ -3,56 +3,342 @@
     "id": "1",
     "title": "Understand dispensing workflow",
     "category": "Dashboard workflow",
-    "text": "Follow the prescription from electronic arrival, pharmacist clinical check and in-stock pick list through the named basket, dispensing, any required accuracy check, packaging and patient notification.",
-    "guide": "Verwood_Dashboard_Workflow.pdf"
+    "text": "Follow the prescription from electronic arrival, pharmacist clinical check and in-stock pick list through the named basket, dispensing, any required accuracy check, packaging and patient notification. Understand the Pharmacy X dashboard and how it relates to the dispensing workflow.",
+    "guide": "Verwood_Dashboard_Workflow.pdf",
+    "topics": [
+      "Dashboard workflow",
+      "Pharmacy X"
+    ],
+    "type": "skill"
   },
   {
     "id": "3",
     "title": "One basket, one patient",
     "category": "Safe dispensing",
     "text": "Complete one patient basket before starting another routine task. If interrupted, secure the basket and leave a clear status handover. Keep the bench tidy. Coordinate scanning with colleagues. Prioritise ready baskets nearby unless clinical urgency or an agreed priority takes precedence.",
-    "guide": "Pharmacy_Workflow_Key_Reminders.pdf"
+    "guide": "Pharmacy_Workflow_Key_Reminders.pdf",
+    "topics": [
+      "Safe dispensing"
+    ],
+    "type": "skill"
   },
   {
     "id": "5",
     "title": "Accuracy-check handover",
     "category": "Safe dispensing",
     "text": "Identify baskets awaiting accuracy checks and keep checked and unchecked items separate. Work within your role. When a controlled drug or refrigerated item requires an ACT check, tell the relevant colleague directly and identify the item. Follow the current SOP.",
-    "guide": "Pharmacy_Workflow_Key_Reminders.pdf"
+    "guide": "Pharmacy_Workflow_Key_Reminders.pdf",
+    "topics": [
+      "Safe dispensing"
+    ],
+    "type": "skill"
   },
   {
     "id": "6",
     "title": "Split packs, expiry dates and leaflets",
     "category": "Special handling",
     "text": "For split packs or medicine removed from original packaging, show the correct expiry on the supplied container or label, following product information and the local SOP. Never guess. Include the correct current PIL for the exact medicine, strength and formulation, particularly CDs and antibiotics.",
-    "guide": "Pharmacy_Workflow_Key_Reminders.pdf"
+    "guide": "Pharmacy_Workflow_Key_Reminders.pdf",
+    "topics": [
+      "Special handling"
+    ],
+    "type": "skill"
   },
   {
     "id": "7",
     "title": "Confidential waste",
     "category": "Special handling",
     "text": "Put patient-identifiable paperwork, labels and tokens into the designated confidential-waste bin. Do not leave them on the bench or put them in general waste.",
-    "guide": "Pharmacy_Workflow_Key_Reminders.pdf"
+    "guide": "Pharmacy_Workflow_Key_Reminders.pdf",
+    "topics": [
+      "Special handling"
+    ],
+    "type": "skill"
   },
   {
     "id": "8",
     "title": "Package securely and add notices",
     "category": "Packaging and labels",
     "text": "Choose a secure bag without crushing packs. Separate refrigerated, bulky or fragile items appropriately. Seal the top with the patient information label and relevant notices, including exemptions, blood pressure service, refrigerated items or owing items. Pause to check patient, medicine, label and package.",
-    "guide": "label guide.pdf"
+    "guide": "label guide.pdf",
+    "topics": [
+      "Packaging and labels"
+    ],
+    "type": "skill"
   },
   {
     "id": "9",
     "title": "Collection, Med Point and delivery labels",
     "category": "Packaging and labels",
     "text": "Use page 2 of the original illustrated guide. Counter collection: patient details at the bottom. Med Point: QR code at the corner of the triangle, not in the centre of the bottom section. Delivery: delivery QR and patient details at the bottom; avoid placing two QR codes together at the bottom.",
-    "guide": "label guide.pdf"
+    "guide": "label guide.pdf",
+    "topics": [
+      "Packaging and labels"
+    ],
+    "type": "skill"
   },
   {
     "id": "10",
     "title": "Print or reprint the dispensing token",
     "category": "Packaging and labels",
     "text": "For Print rx, Print script, Reprint or Print DT labels: open the patient page, scroll to All Prescriptions, choose View for the relevant prescription, then print/reprint DT. Cut off the left side into confidential waste and place the right side inside the bag.",
-    "guide": "label guide.pdf"
+    "guide": "label guide.pdf",
+    "topics": [
+      "Packaging and labels"
+    ],
+    "type": "skill"
+  },
+  {
+    "id": "new-account-smartcard",
+    "title": "Get a smart card",
+    "category": "Account setup",
+    "topics": [
+      "Account setup"
+    ],
+    "text": "Obtain your own smart card.",
+    "type": "checklist"
+  },
+  {
+    "id": "new-account-pharmacyx",
+    "title": "Get a Pharmacy X account",
+    "category": "Account setup",
+    "topics": [
+      "Account setup"
+    ],
+    "text": "Arrange your individual Pharmacy X account.",
+    "type": "checklist"
+  },
+  {
+    "id": "new-account-square",
+    "title": "Get a Square Up account",
+    "category": "Account setup",
+    "topics": [
+      "Account setup"
+    ],
+    "text": "Arrange your individual Square Up account.",
+    "type": "checklist"
+  },
+  {
+    "id": "new-account-slack",
+    "title": "Set up Slack",
+    "category": "Account setup",
+    "topics": [
+      "Account setup"
+    ],
+    "text": "Set up your Slack account and add your mobile phone number, address and profile picture in Slack.",
+    "type": "checklist"
+  },
+  {
+    "id": "new-account-pharmsmart",
+    "title": "Get a PharmSmart account",
+    "category": "Account setup",
+    "topics": [
+      "Account setup"
+    ],
+    "text": "Arrange your individual PharmSmart account.",
+    "type": "checklist"
+  },
+  {
+    "id": "new-account-delivery",
+    "title": "Get a Delivery Desk account",
+    "category": "Account setup",
+    "topics": [
+      "Account setup"
+    ],
+    "text": "Arrange your individual Delivery Desk account.",
+    "type": "checklist"
+  },
+  {
+    "id": "new-px-prescription",
+    "title": "Add a prescription in Pharmacy X",
+    "category": "Pharmacy X",
+    "topics": [
+      "Pharmacy X"
+    ],
+    "text": "Know and practise all three ways to add a prescription:\n• Manual entry\n• Entering the prescription number\n• Bulk download",
+    "type": "skill"
+  },
+  {
+    "id": "new-px-pds",
+    "title": "Use PDS search",
+    "category": "Pharmacy X",
+    "topics": [
+      "Pharmacy X"
+    ],
+    "text": "Learn how to carry out a PDS search. Postcode search tip: entering BH31* searches all BH31 postcodes, as described in the pharmacy training guidance.",
+    "type": "skill"
+  },
+  {
+    "id": "new-px-putaway",
+    "title": "Put away in Pharmacy X",
+    "category": "Pharmacy X",
+    "topics": [
+      "Pharmacy X"
+    ],
+    "text": "Learn and practise how to put away items in Pharmacy X using the pharmacy’s agreed process.",
+    "type": "skill"
+  },
+  {
+    "id": "new-px-message",
+    "title": "Send a message in Pharmacy X",
+    "category": "Pharmacy X",
+    "topics": [
+      "Pharmacy X"
+    ],
+    "text": "Learn and practise how to send a message in Pharmacy X.",
+    "type": "skill"
+  },
+  {
+    "id": "new-square-dashboard",
+    "title": "Use the Square Up dashboard",
+    "category": "Square Up",
+    "topics": [
+      "Square Up"
+    ],
+    "text": "Learn how to use the Square Up dashboard.",
+    "type": "skill"
+  },
+  {
+    "id": "new-square-search",
+    "title": "Search for an item in Square Up",
+    "category": "Square Up",
+    "topics": [
+      "Square Up"
+    ],
+    "text": "Learn and practise how to search for an item in Square Up.",
+    "type": "skill"
+  },
+  {
+    "id": "new-square-receipt",
+    "title": "Print a receipt in Square Up",
+    "category": "Square Up",
+    "topics": [
+      "Square Up"
+    ],
+    "text": "Learn and practise how to print a receipt in Square Up.",
+    "type": "skill"
+  },
+  {
+    "id": "new-slack-notification",
+    "title": "Read VP notification daily",
+    "category": "Slack",
+    "topics": [
+      "Slack"
+    ],
+    "text": "Read the VP notification channel daily and keep up to date with its notices.",
+    "type": "skill"
+  },
+  {
+    "id": "new-slack-channels",
+    "title": "Understand Slack channels",
+    "category": "Slack",
+    "topics": [
+      "Slack"
+    ],
+    "text": "Understand the function of each Slack channel and which channel to use for each purpose.",
+    "type": "skill"
+  },
+  {
+    "id": "new-medpoint-pin",
+    "title": "Get a PIN from MedPoint",
+    "category": "MedPoint",
+    "topics": [
+      "MedPoint"
+    ],
+    "text": "Learn how to get the PIN from MedPoint. Make sure you are giving the PIN to the right person, following the pharmacy’s identity-checking procedure.",
+    "type": "skill"
+  },
+  {
+    "id": "new-medpoint-location",
+    "title": "Check MedPoint status and location",
+    "category": "MedPoint",
+    "topics": [
+      "MedPoint"
+    ],
+    "text": "Learn how to check the status and location of an order in MedPoint.",
+    "type": "skill"
+  },
+  {
+    "id": "new-medpoint-message",
+    "title": "Resend an order-ready message",
+    "category": "MedPoint",
+    "topics": [
+      "MedPoint"
+    ],
+    "text": "Learn how to resend an order-ready message when stock has stayed in the MedPoint machine for too long, following the pharmacy’s agreed process.",
+    "type": "skill"
+  },
+  {
+    "id": "new-porto-patient",
+    "title": "Add and edit patient details in Pharmland Porto",
+    "category": "Pharmland Porto",
+    "topics": [
+      "Pharmland Porto",
+      "Cliniko"
+    ],
+    "text": "Use Pharmland Porto to add and edit patient details. Make sure the patient record includes:\n1. Full name\n2. Date of birth (DOB)\n3. Phone number\n4. Patient email address\n5. Home address\n6. NHS number\n7. Referring doctor\n\nPatient information is linked to Cliniko. Enter actual patient information in the approved patient system, not in this training record.",
+    "type": "skill"
+  },
+  {
+    "id": "new-porto-appointment",
+    "title": "Add and reschedule an appointment",
+    "category": "Pharmland Porto",
+    "topics": [
+      "Pharmland Porto",
+      "Cliniko"
+    ],
+    "text": "Learn how to add an appointment and reschedule an existing appointment in the appointment workflow.",
+    "type": "skill"
+  },
+  {
+    "id": "new-porto-linked",
+    "title": "Understand the Pharmland Porto / Cliniko link",
+    "category": "Pharmland Porto",
+    "topics": [
+      "Pharmland Porto",
+      "Cliniko"
+    ],
+    "text": "Understand that patient information in Pharmland Porto is linked to Cliniko. Use Pharmland Porto to add and edit patient details.",
+    "type": "skill"
+  },
+  {
+    "id": "new-order-search",
+    "title": "Search for a medicine in Order Delivery Desk",
+    "category": "Order Delivery Desk",
+    "topics": [
+      "Order Delivery Desk"
+    ],
+    "text": "Search for a drug to see whether it has been ordered and delivered.",
+    "type": "skill"
+  },
+  {
+    "id": "new-order-note",
+    "title": "Record a patient medicine request",
+    "category": "Order Delivery Desk",
+    "topics": [
+      "Order Delivery Desk"
+    ],
+    "text": "When a patient asks for a medicine, write a note in Order Delivery Desk. Be specific about the medicine name and include the name and date in the note section. Keep actual patient details in the approved operational system, not in this learning record.",
+    "type": "skill"
+  },
+  {
+    "id": "new-pharmsmart-sop",
+    "title": "Sign off SOPs in PharmSmart",
+    "category": "PharmSmart",
+    "topics": [
+      "PharmSmart"
+    ],
+    "text": "Find and sign off the required SOPs under the Governance category in PharmSmart. A training sign-off here does not sign the SOP in PharmSmart.",
+    "type": "skill"
+  },
+  {
+    "id": "new-pharmsmart-functions",
+    "title": "Understand PharmSmart functions",
+    "category": "PharmSmart",
+    "topics": [
+      "PharmSmart"
+    ],
+    "text": "Know how PharmSmart is used to report misses / near misses and to log cleaning and expired stock.",
+    "type": "skill"
   }
 ]

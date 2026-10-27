@@ -1,0 +1,45 @@
+VERWOOD ONBOARDING - FULL ONLINE UPDATE 3.0
+
+WHAT CHANGED
+The opening Dashboard now shows each topic's completed count and percentage. Account setup is shown first. Managers and administrators can select any person's dashboard and still access all staff records, including personal learning, notes and history.
+
+One learning item can have several topics. It has ONE learning record and contributes to each assigned topic, but is counted once in the overall total. Managers and administrators can add or rename shared topics under Manage topics. Renaming a topic updates assignments without deleting records.
+
+To assign topics: open Learning > Edit content & topics on an item, tick one or more topic names, then save. You can enter additional topic names, one per line. Individuals can assign topics to their own personal learning; managers and administrators maintain shared content.
+
+There are 33 built-in learning items:
+- 6 Account setup tasks, using only Done / Not done checkboxes: smart card, Pharmacy X, Square Up, Slack profile setup, PharmSmart and Delivery Desk.
+- Pharmacy X: the three ways to add prescriptions, PDS search with BH31*, put away, messaging and dashboard understanding added to Understand dispensing workflow.
+- Square Up: dashboard, item search and receipt printing.
+- Slack: daily VP notification reading and channel functions.
+- MedPoint: PINs and correct-person verification, status/location checks and resending ready messages for stock left too long.
+- Pharmland Porto and Cliniko: the seven required patient details, appointments/rescheduling and the linked patient-information workflow. Use Pharmland Porto to add/edit patient details. These items appear under BOTH topics with a single learning record.
+- Order Delivery Desk: medicine order/delivery search and clear request notes including names and dates.
+- PharmSmart: SOP sign-off under Governance, reporting misses / near misses, cleaning and expired stock.
+- The existing eight dispensing, packaging and special-handling learning items are kept. Previously removed RMS and scan/label items remain absent.
+
+COMPLETION
+Account setup tasks can be ticked Done or unticked to Not done. Changes record the actor and time in history. Learning skills retain the three recommended steps; anyone can sign off their own steps in any order. Independent working makes the skill complete. Earlier steps count as in progress. Managers can record completion for staff. Archived accounts remain readable.
+
+Managers can choose either completion method when adding or editing an item. Changing the method preserves previous records but changes which record marks the item complete.
+
+INSTALL THIS UPDATE ON YOUR EXISTING ONLINE SERVICE
+1. Download a full backup from the site as administrator.
+2. Extract Verwood-Onboarding-Online-Update-3-Full.zip into a temporary folder.
+3. Open the extracted Verwood-Onboarding-Online folder. Upload ALL ITS CONTENTS to the SAME folder in your onboarding GitHub repository that currently contains server.cjs and package.json. Replace matching application files. Include the NEW learning.cjs file.
+   Correct top-level layout: repository/server.cjs, repository/learning.cjs, repository/public/app.js
+   Wrong: repository/Verwood-Onboarding-Online/server.cjs
+   Do not create a nested update folder.
+4. Commit the upload, then Render > Manual Deploy > Deploy latest commit.
+5. Keep the EXISTING onboarding disk, DATA_DIR=/var/lib/verwood-onboarding and APP_ORIGIN settings. Do NOT reinitialise storage or re-enter first-use setup keys for an existing site. The ZIP contains no data, credentials or accounts.
+6. Sign in again and refresh the browser. Confirm that existing accounts, sign-offs, notes and history remain, and that Dashboard and Manage topics appear.
+7. Check Backup & restore > Storage checks: same Storage ID and mounted disk. Download a new full backup, which now includes topics, multi-topic assignments and checklist status.
+
+EXISTING RECORDS
+Old single-topic content is converted to topic assignments automatically on the server without changing its item ID. Manager-edited wording and existing sign-offs are retained. The existing dispensing-workflow item gains the Pharmacy X topic and dashboard-understanding sentence once; you can edit its topics and wording afterwards. The service saves a pre-change automatic copy before writing this update's data migration.
+Old backups are supported and upgraded on restore. A full restore replaces the current database; it is not a content merge. All storage safeguards and before-restore backups remain in place.
+
+FIRST DEPLOYMENT
+If this is your first online installation, follow DEPLOY-TO-RENDER.txt included in this package. Create a separate onboarding repository/service/disk, complete private first-time setup, and verify records survive a real redeploy before entering real records.
+
+This ZIP does not itself change a live site. Delivery Desk has not been modified.
