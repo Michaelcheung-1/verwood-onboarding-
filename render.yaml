@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: verwood-onboarding
+    runtime: node
+    plan: starter
+    buildCommand: npm run check
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeployTrigger: "off"
+    disk:
+      name: verwood-onboarding-data
+      mountPath: /var/lib/verwood-onboarding
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/lib/verwood-onboarding
+      - key: APP_ORIGIN
+        sync: false
+      - key: SETUP_KEY
+        generateValue: true
+      - key: INITIALISE_STORAGE
+        value: "YES"

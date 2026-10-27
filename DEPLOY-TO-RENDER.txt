@@ -1,0 +1,79 @@
+VERWOOD PHARMACY - ONLINE ONBOARDING - VERSION 2.0
+
+THIS PACKAGE IS READY TO UPLOAD. IT IS NOT A LIVE WEBSITE YET.
+Use a NEW repository, NEW Render web service and NEW persistent disk. Do not use or modify Delivery Desk's repository, service, accounts or disk.
+
+PART 1 - SAVE ANY OFFLINE RECORDS
+If you have already entered learning or accounts in the offline site, sign in there as administrator and download a full backup from Backup & restore. Keep this JSON private. Do not upload it, your data folder or account files to GitHub. The online version can restore your offline backup after its safe initial setup.
+
+PART 2 - CREATE THE GITHUB REPOSITORY
+1. In GitHub, create a new PRIVATE repository called verwood-onboarding (or another new name).
+2. Extract Verwood-Onboarding-Online-Full.zip on your computer.
+3. Open the extracted Verwood-Onboarding-Online folder. Upload the CONTENTS of this folder to the TOP LEVEL of your new repository, then commit.
+4. Check placement: server.cjs, storage.cjs, package.json, skills.json, render.yaml and the public folder must sit at the repository's top level.
+   Correct: repository/server.cjs and repository/public/index.html
+   Wrong: repository/Verwood-Onboarding-Online/server.cjs
+   The ZIP deliberately contains no live database or passwords.
+
+PART 3 - CREATE THE RENDER SERVICE
+The manual route below is recommended for a first setup. render.yaml is an alternative Blueprint configuration for someone familiar with Render; do not create both a manual service and a Blueprint service.
+
+1. In Render choose New > Web Service, then connect the NEW onboarding repository.
+2. Language/runtime: Node. Branch: your repository's main branch.
+3. Root Directory: leave BLANK, because you uploaded the contents to the repository top level.
+4. Build Command: npm run check
+5. Start Command: npm start
+6. Choose a paid compute option that supports persistent disks. The free option does not support this storage design. Review the displayed charge before creating the service.
+7. Add a NEW persistent disk:
+   Name: verwood-onboarding-data
+   Mount path: /var/lib/verwood-onboarding
+   Size: 1 GB to start
+8. Add these environment variables:
+   NODE_ENV = production
+   DATA_DIR = /var/lib/verwood-onboarding
+   INITIALISE_STORAGE = YES
+   SETUP_KEY = a new private random value of at least 24 characters
+   APP_ORIGIN = your exact Render HTTPS address, without a trailing slash
+   Example format ONLY: https://your-service-name.onrender.com
+   Use a password manager to generate SETUP_KEY. Keep it private. Never put it in frontend files, GitHub or a URL.
+9. If the address is not known until the service is created, create it, copy its actual HTTPS address from Render, set APP_ORIGIN to that address, and deploy again. The service intentionally refuses to run without a valid HTTPS APP_ORIGIN. Do not guess the final address or weaken the check.
+10. Set the Health Check Path to /healthz. Set automatic deploys to Off if you want the established manual deployment workflow.
+11. Choose Manual Deploy > Deploy latest commit when configuration is ready. A missing/wrong disk or DATA_DIR causes a safe startup failure. Do not remove storage checks to dismiss an error.
+
+PART 4 - FIRST-TIME SETUP (EMPTY SITE ONLY)
+1. Open your service's HTTPS website. It should show Set up your learning space.
+2. Enter your private SETUP_KEY and type INITIALISE. Enter your own full name, administrator username and a new password. No email address is required.
+3. Create the administrator, then sign in.
+4. In Render Environment, REMOVE INITIALISE_STORAGE and SETUP_KEY. Keep NODE_ENV, DATA_DIR and APP_ORIGIN. Save and deploy again. Setup is now closed; existing accounts remain.
+5. If moving offline records: open Backup & restore on the online site, choose your offline backup JSON, type RESTORE, and restore. This replaces the temporary online administrator and signs everyone out. Sign in with the administrator account FROM THE BACKUP. Do this before staff start using the online site. This is a full replacement, not a merge. Shared and personal learning, accounts, sign-offs and history are included.
+
+PART 5 - REQUIRED PERSISTENCE CHECK BEFORE REAL USE
+1. As administrator, open Backup & restore. Storage checks must show persistent disk verified mounted and directory /var/lib/verwood-onboarding. Note the Storage ID.
+2. Create a test staff account. Add a personal learning entry and sign off a step using that account. Note the text and sign-off date.
+3. In Render select Manual Deploy > Deploy latest commit.
+4. Sign in again. Verify that the same account, test learning entry, notes and sign-off are present. Verify the Storage ID is unchanged.
+5. Download a full backup, then validate a restore before real use. Restore that same backup while the site contains test records only. Sign in again and confirm the records.
+6. Only start using real team records after these checks pass. Local test results cannot prove a Render disk survives a real redeploy.
+
+MANAGERS AND ADMINISTRATORS
+Team records shows every staff member, including archived accounts. Use View full learning record to read shared learning, personal entries, notes, sign-offs and recorded actors/dates. Use View history for that person's activity. Print record prints the selected person's learning. The Learning screen also has a person selector.
+Staff can view their own records only; server permissions enforce this. Managers and administrators can review everyone's records, add shared content and record team progress. Managers manage staff accounts. Administrators also manage higher-role accounts and full backups.
+Everyone can sign off any recommended step on their own record, in any order. Colleague names are optional. Independent working counts as signed off even if earlier steps are unsigned.
+
+BACKUPS AND RECOVERY
+Administrators should download full backups regularly and keep them privately outside Render. These contain password hashes and staff learning records. Original PDFs are in the project package. Server storage also keeps the latest 30 automatic copies before changes, plus separate before-restore copies, in DATA_DIR/backups. These copies help recover mistakes but are on the same disk; they do not replace downloaded backups.
+The restore screen validates the file before replacing records and signs everyone out. It preserves the online disk identity. Older offline backups remain supported. Removed RMS and scan/label card records remain in the database and backup even though their cards are absent from the active list.
+If the database is unexpectedly missing, the site stops instead of seeding new data. Do not set INITIALISE_STORAGE again to fix this. Check that the original disk is attached and DATA_DIR is correct. Restore the previous onboarding.json from a trusted backup through Render's runtime Shell with the service stopped or in a maintenance window; contact support if unsure. Do not alter the storage identity marker. Do not restore another application's data.
+
+LATER UPDATES
+1. Download a full backup first.
+2. Extract the full update ZIP and upload its CONTENTS to the SAME repository top level, replacing the matching application files. Do not nest an update folder.
+3. Commit the changes, then Render > Manual Deploy > Deploy latest commit.
+4. Keep the same onboarding disk and DATA_DIR. Do not reinitialise. Never upload a data folder or database from the ZIP/local computer.
+5. Check accounts, records and the same Storage ID after deployment.
+
+Technical scope: one Render service instance with an attached persistent disk. Server-side JSON records, salted password hashes, expiring HttpOnly/Secure/SameSite cookies, origin checks, conflict detection, atomic saves and disk-mount verification. Sessions end on redeployment, but accounts and records persist. Use HTTPS only. Do not run multiple processes or replicas against the JSON file.
+
+Official Render references:
+https://render.com/docs/web-services
+https://render.com/docs/disks

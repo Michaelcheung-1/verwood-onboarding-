@@ -1,0 +1,12 @@
+{
+  "name": "verwood-onboarding-online",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.cjs",
+    "check": "node --check server.cjs && node --check storage.cjs && node --check public/app.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

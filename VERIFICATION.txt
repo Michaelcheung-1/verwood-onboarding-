@@ -1,0 +1,39 @@
+ONLINE VERSION 2.0 - PRE-DEPLOYMENT VERIFICATION
+
+Passed automated application checks:
+- Private setup key and explicit first-time initialisation.
+- Manager and administrator access to all staff records, including personal learning, notes and sign-offs.
+- Staff see only their own accounts, learning records and personal content.
+- Managers add and edit shared learning. Staff add personal learning.
+- Any recommended step can be signed off independently and in any order.
+- Conflicting changes are rejected instead of overwriting newer records.
+- Full backup and validated restore preserve content, accounts and learning records.
+- Older offline backups and historical records for removed cards remain supported.
+- Accounts, personal learning and sign-offs persist after a local server restart.
+- Restore revokes sessions.
+- Production configuration rejects an incorrect DATA_DIR.
+
+Storage guard tests with simulated Linux mount information:
+- Unmounted data directory refused.
+- Missing previously initialised database refused.
+- Existing production database without the matching app marker refused.
+- Empty storage without explicit first-use authorisation refused.
+- Existing marked storage opens without setup enabled.
+
+Production HTTP configuration tests using isolated local storage:
+- HTTPS redirection and secure session cookie flags.
+- Cross-origin and missing-origin POST requests rejected.
+- Setup closes once an administrator exists.
+- Protected records require authentication.
+- Security response headers present.
+
+Browser review:
+- Manager Team records lists all accounts.
+- Individual staff learning/history opens from Team records.
+- Recommended sign-off buttons remain independently available.
+
+Not yet verified:
+- Actual GitHub upload, Render deployment, TLS, attached disk or persistence across a real Render redeploy. These need the new repository/service to exist.
+- Real-device phone testing; responsive layouts are included.
+
+The full ZIP excludes all runtime data, test accounts, backups and credentials. Existing offline data was not copied into the online package or modified. Delivery Desk was not modified.
