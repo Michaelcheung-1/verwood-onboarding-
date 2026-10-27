@@ -1,6 +1,13 @@
-ONLINE VERSION 4.0.1 - PRE-DEPLOYMENT VERIFICATION
+ONLINE VERSION 5.0 - PRE-DEPLOYMENT VERIFICATION
 
 Passed automated application checks:
+- Full shared/archived content list available to managers and administrators; staff cannot use bulk management.
+- Bulk add, replace and remove topics validated as one transaction; mixed valid/invalid selections make no changes.
+- Archive and restore retain staff learning records and restore completion status.
+- Shared content ordering and optional renumbering survive restart and full backup/restore.
+- Personal item numbers remain unchanged during shared renumbering; personal learning cannot be bulk changed.
+- Duplicate or incomplete order lists and stale revisions are rejected.
+- Invalid duplicate content order in a backup is rejected.
 - Current revision-13 user backup inspected successfully in memory.
 - Nine shared topic assignments retained; Pharmacy X grouping and combined Pharmland Porto and Cliniko grouping match the backup.
 - Empty Cliniko and Safe dispensing entries removed; original backup file unchanged.
@@ -48,6 +55,10 @@ Production HTTP configuration tests using isolated local storage:
 - Security response headers present.
 
 Browser review:
+- Content list displays numbered rows, topic/status filters, details/edit and selection controls.
+- Multiple selected topics are applied and visible in the updated rows.
+- Draft move up/down and before/after reference preview work; saving updates order and references.
+- Order dialog keeps Save and Cancel visible while its rows scroll.
 - Manager Team records lists all accounts.
 - Individual staff learning/history opens from Team records.
 - Search by item number opens the exact numbered content; SOP item is a Done / Not done checkbox.

@@ -4,7 +4,7 @@ function validTopics(value){
  const seen=new Set();return value.map(t=>t.trim()).filter(t=>{const key=t.toLowerCase();if(seen.has(key))return false;seen.add(key);return true;});
 }
 function normalise(item){const topics=topicsOf(item);return{...item,topics,category:topics[0],type:item.type||'skill'};}
-function items(db,seeds){return[...seeds.map(s=>{const override=db.content?.find(c=>c.id===s.id);return normalise({...s,...override,topics:override?(override.topics||[override.category||s.category]):s.topics});}),...(db.content||[]).filter(c=>!seeds.some(s=>s.id===c.id)).map(normalise)].map(s=>({...s,number:db.itemNumbers?.[s.id]}));}
+function items(db,seeds){const order=new Map((db.contentOrder||[]).map((id,i)=>[id,i]));return[...seeds.map(s=>{const override=db.content?.find(c=>c.id===s.id);return normalise({...s,...override,topics:override?(override.topics||[override.category||s.category]):s.topics});}),...(db.content||[]).filter(c=>!seeds.some(s=>s.id===c.id)).map(normalise)].map(s=>({...s,number:db.itemNumbers?.[s.id]})).sort((a,b)=>(a.scope==='personal'?1:0)-(b.scope==='personal'?1:0)||(order.get(a.id)??1e9)-(order.get(b.id)??1e9)||(a.number||0)-(b.number||0)).map((s,i)=>({...s,order:i+1}));}
 function ensureNumbers(db,seeds){
  let changed=false;if(!db.itemNumbers){db.itemNumbers={};changed=true;}
  const used=new Set(Object.values(db.itemNumbers));let next=Math.max(0,...used)+1;
@@ -33,6 +33,7 @@ function upgrade(db,seeds){
  return ensureNumbers(db,seeds)||changed;
 }
 function validateExtras(db){
+ if(db.contentOrder!==undefined&&(!Array.isArray(db.contentOrder)||new Set(db.contentOrder).size!==db.contentOrder.length||db.contentOrder.some(id=>typeof id!=='string'||!/^(custom-[a-f0-9-]+|new-[a-z0-9-]+|[0-9]+)$/.test(id))))throw Error('Invalid content order.');
  if(db.topics!==undefined&&(!Array.isArray(db.topics)||db.topics.length>200||db.topics.some(t=>typeof t!=='string'||!t.trim()||t.length>80)))throw Error('Invalid topic catalogue.');
  for(const c of db.content||[]){if(c.topics!==undefined)validTopics(c.topics);if(c.type!==undefined&&!['skill','checklist'].includes(c.type))throw Error('Invalid learning item type.');}
  if(db.itemNumbers!==undefined){if(!db.itemNumbers||typeof db.itemNumbers!=='object'||Array.isArray(db.itemNumbers))throw Error('Invalid item numbers.');const used=new Set();for(const[id,n]of Object.entries(db.itemNumbers)){if(!/^(custom-[a-f0-9-]+|new-[a-z0-9-]+|[0-9]+)$/.test(id)||!Number.isSafeInteger(n)||n<1||used.has(n))throw Error('Invalid or duplicate item number.');used.add(n);}}

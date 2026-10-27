@@ -1,6 +1,6 @@
-For an existing installation, read UPDATE-4-1-INSTRUCTIONS.txt first.
+For an existing installation, read UPDATE-5-INSTRUCTIONS.txt first.
 
-VERWOOD PHARMACY - ONLINE ONBOARDING - VERSION 4.0.1
+VERWOOD PHARMACY - ONLINE ONBOARDING - VERSION 5.0
 
 THIS PACKAGE IS READY TO UPLOAD. IT IS NOT A LIVE WEBSITE YET.
 Use a NEW repository, NEW Render web service and NEW persistent disk. Do not use or modify Delivery Desk's repository, service, accounts or disk.
@@ -12,7 +12,7 @@ PART 2 - CREATE THE GITHUB REPOSITORY
 1. In GitHub, create a new PRIVATE repository called verwood-onboarding (or another new name).
 2. Extract Verwood-Onboarding-Online-Full.zip on your computer.
 3. Open the extracted Verwood-Onboarding-Online folder. Upload the CONTENTS of this folder to the TOP LEVEL of your new repository, then commit.
-4. Check placement: server.cjs, storage.cjs, learning.cjs, package.json, skills.json, render.yaml and the public folder must sit at the repository's top level.
+4. Check placement: server.cjs, storage.cjs, learning.cjs, library.cjs, package.json, skills.json, render.yaml and the public folder must sit at the repository's top level.
    Correct: repository/server.cjs and repository/public/index.html
    Wrong: repository/Verwood-Onboarding-Online/server.cjs
    The ZIP deliberately contains no live database or passwords.

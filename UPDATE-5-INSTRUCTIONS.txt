@@ -1,0 +1,48 @@
+VERWOOD ONBOARDING - FULL ONLINE UPDATE 5.0
+
+NEW CONTENT LIST PAGE
+Sign in as a manager or administrator and open Content list.
+- See the complete shared content list, item numbers, order, topics and completion methods.
+- Find an item by its number, title or topic. Filter by topic, status or shared/personal content.
+- Details shows the learning instructions. Edit changes an item's title, wording, topics and completion method.
+- Personal entries can be reviewed. Bulk changes apply to shared team content; personal records are not changed by these bulk controls. Individuals still edit their own personal learning through Learning.
+
+ARRANGE ORDER AND ITEM NUMBERS
+1. Open Content list > Arrange order & numbers.
+2. Use Up / Down, or enter a Position and press Move. The full shared list is shown, including archived items labelled Archived.
+3. Leave Also renumber item numbers to follow this order UNTICKED to keep existing reference numbers while changing the order staff see.
+4. Tick that option if you also want the item numbers rearranged. Review the Current > New number column before saving. Shared item numbers are reassigned in ascending order; numbers belonging to personal items remain unchanged, so gaps may remain.
+5. Choose Save order, or Save order and renumber items. Cancel discards the draft.
+
+Learning records stay attached to the same content when order or reference numbers change. Older activity history retains the number used at the time. New items receive new numbers. Order and numbers are stored on the server and included in full backups.
+
+BULK EDIT TOPICS / CATEGORIES
+1. Tick the shared items you want to change. The top checkbox selects all SHOWN shared items.
+2. Choose Bulk edit topics.
+3. Choose Add topics, Replace all topics, or Remove topics.
+4. Tick one or more topics, or enter additional names one per line, then Apply to selected items.
+5. Each item must retain at least one topic. If any selected item would be invalid, none of the selected items are changed.
+
+Changing a filter or search clears the selection. Refresh the list if another manager has saved a change. Conflicting changes are rejected rather than overwriting newer edits.
+
+DELETE CONTENT AND RESTORE IT
+1. Select active shared items and choose Delete selected (archive).
+2. Read the confirmation. Deletion here removes content from active learning and dashboard totals, while keeping all staff notes, sign-offs and history.
+3. To undo it, set Status to Archived content, select the items and choose Restore selected. The previous staff records reappear with the restored content.
+4. Staff and managers can also select Learning > Learning status > Archived learning to read the archived items and their saved records. Archived learning is read-only until restored.
+
+This update does not permanently erase learning records. Managers and administrators can still view all staff records. The latest category changes from your revision-13 backup remain: dispensing and packaging under Pharmacy X, and the combined Pharmland Porto and Cliniko topic. Empty-topic cleanup and the consent/SOP checkboxes remain included.
+
+INSTALL THE FULL UPDATE
+1. As administrator, download a new full backup from your current site.
+2. Extract Verwood-Onboarding-Online-Update-5-Full.zip into a temporary folder.
+3. Open its Verwood-Onboarding-Online folder. Upload ALL CONTENTS to the SAME onboarding GitHub project folder that currently contains server.cjs and package.json. Replace matching application files. Include the NEW library.cjs, public/library.js and public/library.css.
+   Correct: repository/server.cjs, repository/library.cjs, repository/public/library.js
+   Wrong: repository/Verwood-Onboarding-Online/server.cjs
+   Do not nest an update folder. Never upload a data folder or backup JSON.
+4. Commit, then Render > Manual Deploy > Deploy latest commit.
+5. Keep the same onboarding disk, DATA_DIR=/var/lib/verwood-onboarding and APP_ORIGIN. Do not initialise again. Delivery Desk is not changed.
+6. Sign in again and refresh the browser. Check that Content list appears for managers/admins and that existing accounts, categories, learning records and Storage ID are preserved.
+7. Download a full backup after arranging content; it includes the order, number assignments, archived items, topics, accounts and learning history. Restore remains a full replacement, not a content merge.
+
+For a first online installation, use DEPLOY-TO-RENDER.txt. Creating this ZIP does not change your live website. Real Render redeploy/persistence checks still require the actual service.
