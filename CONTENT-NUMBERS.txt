@@ -1,0 +1,105 @@
+VERWOOD ONBOARDING - ORIGINAL CONTENT NUMBERS (REVISION-22 ORDER)
+
+These are the 34 original items after Update 6. Later manual renumbering in the site can change this list.
+
+#001  Understand dispensing workflow
+      Topics: Pharmacy X; New staff onboarding
+
+#002  One basket, one patient
+      Topics: Pharmacy X; New staff onboarding
+
+#003  Package securely and add notices
+      Topics: Pharmacy X; New staff onboarding
+
+#004  Collection, Med Point and delivery labels
+      Topics: Pharmacy X; New staff onboarding
+
+#005  Accuracy-check handover
+      Topics: Pharmacy X; New staff onboarding
+
+#006  Split packs, expiry dates and leaflets
+      Topics: Special handling; New staff onboarding
+
+#007  Confidential waste
+      Topics: Special handling; New staff onboarding
+
+#008  Print or reprint the dispensing token
+      Topics: Pharmacy X; New staff onboarding
+
+#009  Get a Pharmacy X account
+      Topics: Account setup; New staff onboarding
+
+#010  Get a Square Up account
+      Topics: Account setup; New staff onboarding
+
+#011  Set up Slack
+      Topics: Account setup; New staff onboarding
+
+#012  Put away in Pharmacy X
+      Topics: Pharmacy X; New staff onboarding
+
+#013  Get a PharmSmart account
+      Topics: Account setup; New staff onboarding
+
+#014  Get a Delivery Desk account
+      Topics: Account setup; New staff onboarding
+
+#015  Add a prescription in Pharmacy X
+      Topics: Pharmacy X; New staff onboarding
+
+#016  Use PDS search
+      Topics: Pharmacy X; New staff onboarding
+
+#017  Send a message in Pharmacy X
+      Topics: Pharmacy X; New staff onboarding
+
+#018  Use the Square Up dashboard
+      Topics: Square Up; New staff onboarding
+
+#019  Search for an item in Square Up
+      Topics: Square Up; New staff onboarding
+
+#020  Print a receipt in Square Up
+      Topics: Square Up; New staff onboarding
+
+#021  Get a smart card
+      Topics: Account setup; New staff onboarding
+
+#022  Read VP notification daily
+      Topics: Slack; New staff onboarding
+
+#023  Understand Slack channels
+      Topics: Slack; New staff onboarding
+
+#024  Get a PIN from MedPoint
+      Topics: MedPoint; New staff onboarding
+
+#025  Check MedPoint status and location
+      Topics: MedPoint; New staff onboarding
+
+#026  Resend an order-ready message
+      Topics: MedPoint; New staff onboarding
+
+#027  Understand the Pharmland Porto / Cliniko link
+      Topics: Pharmland Porto and Cliniko; New staff onboarding
+
+#028  Add and edit patient details in Pharmland Porto
+      Topics: Pharmland Porto and Cliniko; New staff onboarding
+
+#029  Add and reschedule an appointment
+      Topics: Pharmland Porto and Cliniko; New staff onboarding
+
+#030  Search for a medicine in Order Delivery Desk
+      Topics: Order Delivery Desk; New staff onboarding
+
+#031  Record a patient medicine request
+      Topics: Order Delivery Desk; New staff onboarding
+
+#032  Understand PharmSmart functions
+      Topics: PharmSmart; New staff onboarding
+
+#033  Sign off SOPs in PharmSmart
+      Topics: PharmSmart; New staff onboarding
+
+#034  Consent: do not share work accounts outside the company
+      Topics: Account setup; New staff onboarding

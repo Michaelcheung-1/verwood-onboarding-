@@ -1,6 +1,15 @@
-ONLINE VERSION 5.0 - PRE-DEPLOYMENT VERIFICATION
+ONLINE VERSION 6.0 - PRE-DEPLOYMENT VERIFICATION
 
 Passed automated application checks:
+- Current revision-22 backup inspected in memory; all 34 original items renumbered to match its saved order.
+- All 34 New staff onboarding topic assignments preserved, together with existing system topics.
+- Original backup bytes, accounts, records and history unchanged during compatibility checks.
+- Staff trainer selector returns only active account names/usernames while staff learning records remain private.
+- Staff trainer name resolved on the server; spoofed actor/trainer text ignored.
+- Typed Other trainer name required and saved; unavailable/disabled trainers rejected.
+- Trainer metadata validated on restore; legacy trainer text remains supported.
+- Trainer details survive full backup/restore and restart.
+- One-time original-content alignment does not reset later manual ordering/numbering on restart.
 - Full shared/archived content list available to managers and administrators; staff cannot use bulk management.
 - Bulk add, replace and remove topics validated as one transaction; mixed valid/invalid selections make no changes.
 - Archive and restore retain staff learning records and restore completion status.
@@ -8,7 +17,7 @@ Passed automated application checks:
 - Personal item numbers remain unchanged during shared renumbering; personal learning cannot be bulk changed.
 - Duplicate or incomplete order lists and stale revisions are rejected.
 - Invalid duplicate content order in a backup is rejected.
-- Current revision-13 user backup inspected successfully in memory.
+- Earlier revision-13 category grouping retained; superseded by revision-22 assignments for this update.
 - Nine shared topic assignments retained; Pharmacy X grouping and combined Pharmland Porto and Cliniko grouping match the backup.
 - Empty Cliniko and Safe dispensing entries removed; original backup file unchanged.
 - Current backup accounts, records and history unchanged during in-memory migration.
@@ -55,6 +64,9 @@ Production HTTP configuration tests using isolated local storage:
 - Security response headers present.
 
 Browser review:
+- Original content appears in the revision-22 order with matching numbers.
+- Who is the trainer? offers active staff names and Other.
+- Other displays a trainer-name input; saved sign-off shows Trainer separately from Signed off by.
 - Content list displays numbered rows, topic/status filters, details/edit and selection controls.
 - Multiple selected topics are applied and visible in the updated rows.
 - Draft move up/down and before/after reference preview work; saving updates order and references.

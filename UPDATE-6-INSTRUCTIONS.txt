@@ -1,0 +1,50 @@
+VERWOOD ONBOARDING - FULL ONLINE UPDATE 6.0
+
+LATEST BACKUP USED
+This update uses verwood-onboarding-backup (1).json, revision 22. It contains the saved order for all 34 original items and your New staff onboarding topic assignments. Its item-number map was still in the previous sequence. This update aligns those original item numbers with the saved order.
+
+Examples of the revised numbering:
+#001 Understand dispensing workflow
+#002 One basket, one patient
+#003 Package securely and add notices
+#004 Collection, Med Point and delivery labels
+#005 Accuracy-check handover
+#012 Put away in Pharmacy X
+#021 Get a smart card
+#032 Understand PharmSmart functions
+#033 Sign off SOPs in PharmSmart
+#034 Consent: do not share work accounts outside the company
+
+CONTENT-NUMBERS.txt contains the complete list. All 34 original items retain the New staff onboarding topic as well as their system-specific topics. The source package contains training content and ordering defaults only: no real accounts, passwords, password hashes or staff learning records have been copied into the ZIP. The original backup was not modified.
+
+SAFE NUMBERING UPDATE
+The requested original-item order/number alignment is applied once on first startup with this version, with a server-side safety copy saved before the change. Existing sign-offs, notes, accounts and history stay in place. History retains the number used when each earlier action was recorded.
+Any additional custom/personal items are kept. Their item numbers are not changed. If other numbers are reserved, the original items use their existing set of numbers in ascending order, preventing duplicate references.
+After this initial update, changes you make through Content list > Arrange order & numbers are kept across restarts and later deployments. Re-uploading this same update does not reset your later manual arrangement. Full backups include the numbering-update marker and your saved order. Restoring an older backup made before this update applies the requested alignment once as part of upgrading that backup.
+
+STEP 1 - WHO IS THE TRAINER?
+1. Open a learning item and choose Step 1: Shown by someone.
+2. In Who is the trainer?, choose an active staff member, manager or administrator by name.
+3. If the trainer is not listed, choose Other - type a trainer name, then enter their name.
+4. Add optional notes and confirm the step. A trainer choice/name is now required for a new Step 1 sign-off.
+5. The saved record shows Trainer separately from Signed off by. The server records the actor and time and uses the selected account's saved name, rather than accepting a typed replacement for that staff member.
+
+This records who demonstrated the skill; it does not require a second person to log in or provide a trainer approval. Step 2 keeps its optional colleague name and Step 3 is unchanged. Steps can still be recorded in any order. Existing historical trainer text is retained, and older backups remain supported.
+
+Staff can see the active staff-name choices needed to select a trainer, but still see only their own learning records. The trainer list contains names and usernames only; no passwords, private account settings or other people's learning records are exposed. Disabled accounts do not appear for new sign-offs. Previously recorded trainer names remain in history even if an account is later archived.
+
+INSTALL ON THE EXISTING ONLINE SITE
+1. As administrator, download a NEW full backup of the current site before updating.
+2. Extract Verwood-Onboarding-Online-Update-6-Full.zip into a temporary folder.
+3. Open the extracted Verwood-Onboarding-Online folder. Upload ALL ITS CONTENTS to the SAME onboarding GitHub project folder that currently contains server.cjs and package.json. Replace matching application files. Include the NEW trainers.cjs and curriculum-order.json as well as learning.cjs, public/app.js and all other project files.
+   Correct: repository/server.cjs, repository/trainers.cjs, repository/curriculum-order.json
+   Wrong: repository/Verwood-Onboarding-Online/server.cjs
+   Do not upload the data folder or your backup JSON. Do not create a nested update folder.
+4. Commit, then Render > Manual Deploy > Deploy latest commit.
+5. Keep the SAME onboarding persistent disk, DATA_DIR=/var/lib/verwood-onboarding and APP_ORIGIN. Do not initialise storage again. Delivery Desk is not modified.
+6. Sign in again and refresh the browser. In Content list, verify the order and numbers against CONTENT-NUMBERS.txt. Check New staff onboarding and the new trainer selector. Check that existing accounts, records and the Storage ID are unchanged.
+7. Download a new full backup after checking the site. Trainer choices, typed names, numbering and order are included in full backups.
+
+You do not need to restore the supplied backup just to install this update. Restore is a full replacement, not a content merge. Existing live accounts and records are preserved by deploying the application update over the same persistent disk.
+
+For first online installation, use DEPLOY-TO-RENDER.txt. This ZIP does not itself change your live website. Actual Render persistence across a redeploy must be verified on the service before real use.
