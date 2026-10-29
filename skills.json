@@ -16,7 +16,7 @@
     "id": "3",
     "title": "One basket, one patient",
     "category": "Pharmacy X",
-    "text": "Complete one patient basket before starting another routine task. If interrupted, secure the basket and leave a clear status handover. Keep the bench tidy. Coordinate scanning with colleagues. Prioritise ready baskets nearby unless clinical urgency or an agreed priority takes precedence.",
+    "text": "Complete one patient basket before starting another routine task. If interrupted, secure the basket and leave a clear status handover.Prioritise ready baskets nearby unless clinical urgency or an agreed priority takes precedence. Apply dispensing labels neatly and securely. Never cover the expiry date or BIN code. Wherever possible, leave the barcode visible so it can be scanned again easily.",
     "guide": "Pharmacy_Workflow_Key_Reminders.pdf",
     "topics": [
       "Pharmacy X",
@@ -415,5 +415,18 @@
     "type": "checklist",
     "requiresSelf": true,
     "archived": false
+  },
+  {
+    "id": "new-square-cashup",
+    "title": "Cash up every day and set up the till",
+    "text": "Set up the till with a £75 daily float and arrange notes, coins and receipts as shown in the till setup guide. Learn the pharmacy's daily cash-up process, record the cash count and report any difference to the manager. Cash up every day and follow the agreed handover process.",
+    "category": "Square Up",
+    "topics": [
+      "Square Up",
+      "New staff onboarding"
+    ],
+    "type": "skill",
+    "archived": false,
+    "guide": "Verwood-Till-Setup-Guide.pdf"
   }
 ]

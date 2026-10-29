@@ -1,0 +1,17 @@
+UPDATE 7 - DAILY CASH-UP AND TILL SETUP
+
+Based on your latest backup, revision 35. Existing content edits, topics and numbers are retained. New item #35: Cash up every day and set up the till (Square Up and New staff onboarding). The PDF guide is included and opens from the learning item. All three recommended sign-off steps remain available, including trainer selection for step 1.
+
+DEPLOY
+1. Extract the full update ZIP.
+2. Upload the CONTENTS of Verwood-Onboarding-Online to the root of your existing onboarding GitHub repository. Replace matching files. Do not upload to Delivery Desk or create a nested project folder.
+3. Commit, then in the onboarding Render service choose Manual Deploy > Deploy latest commit.
+4. Keep your existing persistent disk and DATA_DIR=/var/lib/verwood-onboarding. Do not initialise storage or create new accounts.
+5. Sign in and check item #35 under Square Up. Open its PDF guide.
+
+Your existing records and content overrides stay on the server. The update adds the new item automatically. You do not need to restore a backup for this update.
+
+OPTIONAL PRIVATE BACKUP
+Verwood-Onboarding-Updated-Backup-Private.json is supplied separately. It is your revision-35 backup with the one new item added. It retains account/password data and learning records. Keep it private; do not upload it to GitHub. Restoring replaces the site's data, so use it only if you deliberately need to restore this snapshot, after deploying Update 7. Do not restore over newer staff records.
+
+This package has not been deployed to your live site.

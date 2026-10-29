@@ -4,7 +4,7 @@ let db=storage.db;const save=()=>storage.save(db);
 if(production&&(!process.env.APP_ORIGIN||!/^https:\/\/[^/]+$/.test(process.env.APP_ORIGIN)))throw Error('Set APP_ORIGIN to the exact HTTPS site address, without a trailing slash.');
 const skills=JSON.parse(fs.readFileSync(path.join(__dirname,'skills.json'))),sessions=new Map(),attempts=new Map();
 const learning=require('./learning.cjs'),trainers=require('./trainers.cjs'),orderDefaults=require('./curriculum-order.json');
-if(db.accounts.length&&learning.upgrade(db,skills,orderDefaults)){db.revision++;db.history.push({actor:'System update',username:'system',target:'everyone',action:'Aligned original content numbers with the revision-22 order; learning records preserved',at:new Date().toISOString()});save();}
+if(db.accounts.length&&learning.upgrade(db,skills,orderDefaults)){db.revision++;db.history.push({actor:'System update',username:'system',target:'everyone',action:'Updated shared learning library; existing content numbers and learning records preserved',at:new Date().toISOString()});save();}
 const allSkills=()=>learning.items(db,skills);
 const preferredTopics=['Account setup','Pharmacy X','Square Up','Slack','MedPoint','Pharmland Porto','Cliniko','Order Delivery Desk','PharmSmart'];
 const topicCatalogue=()=>[...new Set([...(db.topics||[]),...allSkills().filter(s=>!s.archived&&s.scope!=='personal').flatMap(learning.topicsOf)])].sort((a,b)=>(preferredTopics.includes(a)?preferredTopics.indexOf(a):100)-(preferredTopics.includes(b)?preferredTopics.indexOf(b):100));
