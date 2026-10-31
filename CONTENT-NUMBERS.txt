@@ -1,35 +1,41 @@
-#1 Understand dispensing workflow
-#2 One basket, one patient
-#3 Package securely and add notices
-#4 Collection, Med Point and delivery labels
-#5 Accuracy-check handover
-#6 Split packs, expiry dates and leaflets
-#7 Confidential waste
-#8 Print or reprint the dispensing token
-#9 Get a Pharmacy X account
-#10 Get a Square Up account
-#11 Set up Slack
-#12 Put away in Pharmacy X
-#13 Get a PharmSmart account
-#14 Get a Delivery Desk account
-#15 Add a prescription in Pharmacy X
-#16 Use PDS search
-#17 Send a message in Pharmacy X
-#18 Use the Square Up dashboard
-#19 Search for an item in Square Up
-#20 Print a receipt in Square Up
-#21 Get a smart card
-#22 Read VP notification daily
-#23 Understand Slack channels
-#24 Get a PIN from MedPoint
-#25 Check MedPoint status and location
-#26 Resend an order-ready message
-#27 Understand the Pharmland Porto / Cliniko link
-#28 Add and edit patient details in Pharmland Porto
-#29 Add and reschedule an appointment
-#30 Search for a medicine in Order Delivery Desk
-#31 Record a patient medicine request
-#32 Understand PharmSmart functions
-#33 Sign off SOPs in PharmSmart
-#34 Consent: do not share work accounts outside the company
-#35 Cash up every day and set up the till
+Default shared numbering (custom/personal items may affect numbers):
+#001 How to use this site
+#002 Understand dispensing workflow
+#003 One basket, one patient
+#004 Package securely and add notices
+#005 Collection, Med Point and delivery labels
+#006 Accuracy-check handover
+#007 Split packs, expiry dates and leaflets
+#008 Confidential waste
+#009 Print or reprint the dispensing token
+#010 Get a Pharmacy X account
+#011 Get a Square Up account
+#012 Set up Slack
+#013 Put away in Pharmacy X
+#014 Get a PharmSmart account
+#015 Get a Delivery Desk account
+#016 Download prescriptions in Pharmacy X
+#017 Add a manual prescription in Pharmacy X
+#018 Use PDS search
+#019 Send a message in Pharmacy X
+#020 Use the Square Up dashboard
+#021 Search for an item in Square Up
+#022 Print a receipt in Square Up
+#023 Cash up every day and set up the till
+#024 Get a smart card
+#025 Read VP notification daily
+#026 Understand Slack channels
+#027 Get a PIN from MedPoint
+#028 Check MedPoint status and location
+#029 Resend an order-ready message
+#030 Understand the Pharmland Porto / Cliniko link
+#031 Add and edit patient details in Pharmland Porto
+#032 Add and reschedule an appointment
+#033 Search for a medicine in Order Delivery Desk
+#034 Record a patient medicine request
+#035 Understand PharmSmart functions
+#036 Log a near miss in PharmSmart
+#037 Log cleaning in PharmSmart
+#038 Log expired stock in PharmSmart
+#039 Sign off SOPs in PharmSmart
+#040 Consent: do not share work accounts outside the company

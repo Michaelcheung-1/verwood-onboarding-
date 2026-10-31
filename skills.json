@@ -1,5 +1,16 @@
 [
   {
+    "id": "new-site-introduction",
+    "title": "How to use this site",
+    "category": "How to use this site",
+    "topics": [
+      "How to use this site"
+    ],
+    "type": "checklist",
+    "archived": false,
+    "text": "This onboarding site helps new staff build confidence in their work at Verwood Pharmacy. We encourage active learning: use the site on your own or alongside a colleague.\n\nMost practical skills have three recommended learning steps: Shown by someone, Practised with support, and Can do independently. Please ask a colleague to demonstrate a skill, then practise it with their support. When you can carry out the skill independently, you can sign off the final step yourself. For the first step, choose the trainer from the staff list or select Other and enter their name.\n\nUnderstanding topics have two steps: Explained by someone, and Can explain it back. Ask a colleague to explain the topic, then explain it back in your own words.\n\nThe steps are recommended. You can sign off any step in any order, without completing earlier steps first. Account setup and other checklist items use Done / Not done.\n\nOpen a topic from the dashboard to see its learning items. You can also log your own learning. Managers and administrators can review all staff learning records.\n\nMark this introduction Done when you have read it and understand how to use the site."
+  },
+  {
     "id": "1",
     "title": "Understand dispensing workflow",
     "category": "Pharmacy X",
@@ -9,7 +20,7 @@
       "Pharmacy X",
       "New staff onboarding"
     ],
-    "type": "skill",
+    "type": "understanding",
     "archived": false
   },
   {
@@ -177,13 +188,25 @@
   },
   {
     "id": "new-px-prescription",
-    "title": "Add a prescription in Pharmacy X",
+    "title": "Download prescriptions in Pharmacy X",
     "category": "Pharmacy X",
     "topics": [
       "Pharmacy X",
       "New staff onboarding"
     ],
-    "text": "Know and practise all three ways to add a prescription:\n• Manual entry\n• Entering the prescription number\n• Bulk download",
+    "text": "Learn the two ways to download prescriptions in Pharmacy X: enter a prescription number or use bulk download. Know when to use each method and check that the correct prescription has been downloaded. Adding a manual prescription is covered in the next learning item.",
+    "type": "skill",
+    "archived": false
+  },
+  {
+    "id": "new-px-manual",
+    "title": "Add a manual prescription in Pharmacy X",
+    "text": "Learn how to add a manual prescription in Pharmacy X. Follow the pharmacy's procedure, enter the prescription details accurately, and check the patient, medicine, strength, directions and quantity before continuing.",
+    "category": "Pharmacy X",
+    "topics": [
+      "Pharmacy X",
+      "New staff onboarding"
+    ],
     "type": "skill",
     "archived": false
   },
@@ -248,6 +271,19 @@
     "archived": false
   },
   {
+    "id": "new-square-cashup",
+    "title": "Cash up every day and set up the till",
+    "text": "Set up the till with a £75 daily float and arrange notes, coins and receipts as shown in the till setup guide. Learn the pharmacy's daily cash-up process, record the cash count and report any difference to the manager. Cash up every day and follow the agreed handover process.",
+    "category": "Square Up",
+    "topics": [
+      "Square Up",
+      "New staff onboarding"
+    ],
+    "type": "skill",
+    "archived": false,
+    "guide": "Verwood-Till-Setup-Guide.pdf"
+  },
+  {
     "id": "new-account-smartcard",
     "title": "Get a smart card",
     "category": "Account setup",
@@ -280,7 +316,7 @@
       "New staff onboarding"
     ],
     "text": "Understand the function of each Slack channel and which channel to use for each purpose.",
-    "type": "skill",
+    "type": "understanding",
     "archived": false
   },
   {
@@ -328,7 +364,7 @@
       "New staff onboarding"
     ],
     "text": "Understand that patient information in Pharmland Porto is linked to Cliniko. Use Pharmland Porto to add and edit patient details.",
-    "type": "skill",
+    "type": "understanding",
     "archived": false
   },
   {
@@ -388,6 +424,42 @@
       "New staff onboarding"
     ],
     "text": "Know how PharmSmart is used to report misses / near misses and to log cleaning and expired stock.",
+    "type": "understanding",
+    "archived": false
+  },
+  {
+    "id": "new-pharmsmart-nearmiss",
+    "title": "Log a near miss in PharmSmart",
+    "text": "Know how to log a near miss in PharmSmart. Follow the pharmacy's reporting procedure, record the relevant details clearly, and tell the appropriate colleague so that any immediate action and learning can be followed up.",
+    "category": "PharmSmart",
+    "topics": [
+      "PharmSmart",
+      "New staff onboarding"
+    ],
+    "type": "skill",
+    "archived": false
+  },
+  {
+    "id": "new-pharmsmart-cleaning",
+    "title": "Log cleaning in PharmSmart",
+    "text": "Know how to log completed cleaning in PharmSmart. Record the area or task, the date and any relevant notes, following the pharmacy's cleaning schedule. Only sign for cleaning you have completed.",
+    "category": "PharmSmart",
+    "topics": [
+      "PharmSmart",
+      "New staff onboarding"
+    ],
+    "type": "skill",
+    "archived": false
+  },
+  {
+    "id": "new-pharmsmart-expired",
+    "title": "Log expired stock in PharmSmart",
+    "text": "Know how to log expired stock in PharmSmart. Record the item and relevant stock details, separate expired stock from usable stock, and follow the pharmacy's procedure for disposal and any further action.",
+    "category": "PharmSmart",
+    "topics": [
+      "PharmSmart",
+      "New staff onboarding"
+    ],
     "type": "skill",
     "archived": false
   },
@@ -415,18 +487,5 @@
     "type": "checklist",
     "requiresSelf": true,
     "archived": false
-  },
-  {
-    "id": "new-square-cashup",
-    "title": "Cash up every day and set up the till",
-    "text": "Set up the till with a £75 daily float and arrange notes, coins and receipts as shown in the till setup guide. Learn the pharmacy's daily cash-up process, record the cash count and report any difference to the manager. Cash up every day and follow the agreed handover process.",
-    "category": "Square Up",
-    "topics": [
-      "Square Up",
-      "New staff onboarding"
-    ],
-    "type": "skill",
-    "archived": false,
-    "guide": "Verwood-Till-Setup-Guide.pdf"
   }
 ]

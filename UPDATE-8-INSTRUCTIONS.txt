@@ -1,0 +1,20 @@
+UPDATE 8 - LEARNING CONTENT, UNDERSTANDING STEPS AND DASHBOARD
+
+Upload the CONTENTS of the extracted Verwood-Onboarding-Online folder to the root of your existing onboarding GitHub repository, replacing matching files. Commit, then in the onboarding Render service choose Manual Deploy > Deploy latest commit.
+
+Keep your existing persistent disk and DATA_DIR=/var/lib/verwood-onboarding. Do not initialise storage. No backup restore is needed. Do not change Delivery Desk.
+
+WHAT CHANGES
+- How to use this site: first topic and first checklist item.
+- Updated label guide: the supplied three-page PDF replaces the previous guide.
+- Former #001, #023, #027 and #032: two understanding steps, Explained by someone / Can explain it back. Any step may be signed off in any order. Trainer selection stays available for the first step.
+- Download prescriptions and Add a manual prescription are separate items.
+- Three new PharmSmart skills: log a near miss, log cleaning, log expired stock.
+- Items rearranged and renumbered once. Existing IDs, accounts, records and history are retained. Existing personal item numbers stay fixed; custom shared items follow the updated curriculum. Historical activity retains the number recorded at the time.
+- Dashboard and topic boxes show started totals (including complete), in-progress totals and completed totals. Starting any step counts; checking Done also counts. Completion still requires the final step or Done.
+
+Existing sign-offs are retained, including any earlier middle practice step on an understanding item. Only the two current understanding steps are displayed. The final step keeps the previous final-step record, preserving completed learning.
+
+After deployment: sign in, check the first topic, open the label guide, confirm new items and two-step topics, and verify staff progress. Download a fresh backup. Subsequent manual content orders and edits are retained on restart.
+
+Only this update's numbered instructions are included. This package has not been deployed to your live site.

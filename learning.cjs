@@ -12,12 +12,25 @@ function ensureNumbers(db,seeds){
  return changed;
 }
 function complete(item,record){return item.type==='checklist'?record?.done===true:!!record?.steps?.some(s=>s.step===3);}
-function progress(list,records){const topics=[...new Set(list.flatMap(topicsOf))];return topics.map(name=>{const assigned=list.filter(s=>topicsOf(s).includes(name)),done=assigned.filter(s=>complete(s,records[s.id])).length,started=assigned.filter(s=>!complete(s,records[s.id])&&(records[s.id]?.steps?.length||records[s.id]?.done===true)).length;return{name,total:assigned.length,done,started,percent:assigned.length?Math.round(done/assigned.length*100):0};});}
+function progress(list,records){const topics=[...new Set(list.flatMap(topicsOf))];return topics.map(name=>{const assigned=list.filter(s=>topicsOf(s).includes(name)),done=assigned.filter(s=>complete(s,records[s.id])).length,started=assigned.filter(s=>!complete(s,records[s.id])&&(records[s.id]?.steps?.length||records[s.id]?.done===true)).length;return{name,total:assigned.length,done,started,startedTotal:done+started,percent:assigned.length?Math.round(done/assigned.length*100):0};});}
 function applyOrderDefaults(db,seeds,defaults){
  if(!defaults||db.appliedOrderDefaults===defaults.version)return false;
  const all=items(db,seeds),shared=all.filter(s=>s.scope!=='personal'),requested=defaults.contentOrder.filter(id=>shared.some(s=>s.id===id));
  const available=requested.map(id=>db.itemNumbers[id]).sort((a,b)=>a-b);if(available.some(n=>!Number.isSafeInteger(n)))throw Error('Cannot apply curriculum numbering.');
  requested.forEach((id,i)=>db.itemNumbers[id]=available[i]);db.contentOrder=[...requested,...shared.filter(s=>!requested.includes(s.id)).map(s=>s.id)];db.appliedOrderDefaults=defaults.version;return true;
+}
+function applyCurriculumUpdate(db,seeds){
+ const update=require('./curriculum-update.json');if(db.curriculumUpdate>=update.version)return false;
+ const admin=db.accounts?.find(a=>a.role==='admin'&&!a.disabled)||db.accounts?.[0];
+ for(const[id,fields]of Object.entries(update.patches)){
+  const previous=(db.content||[]).find(c=>c.id===id),seed=seeds.find(s=>s.id===id);
+  if(previous)Object.assign(previous,fields);
+  else if(seed&&admin){db.content=db.content||[];db.content.push({...seed,...fields,scope:'shared',owner:admin.username});}
+ }
+ ensureNumbers(db,seeds);
+ const shared=items(db,seeds).filter(s=>s.scope!=='personal'),ids=[...update.order.filter(id=>shared.some(s=>s.id===id)),...shared.filter(s=>!update.order.includes(s.id)).map(s=>s.id)];
+ const numbers=shared.map(s=>s.number).sort((a,b)=>a-b);ids.forEach((id,i)=>db.itemNumbers[id]=numbers[i]);db.contentOrder=ids;
+ db.curriculumUpdate=update.version;return true;
 }
 function upgrade(db,seeds,defaults){
  let changed=false;
@@ -36,13 +49,14 @@ function upgrade(db,seeds,defaults){
   const active=items(db,seeds).filter(s=>!s.archived),assigned=new Set(active.flatMap(topicsOf));if(db.topics)db.topics=db.topics.filter(t=>assigned.has(t));
   db.curriculumVersion=4;changed=true;
  }
- if(ensureNumbers(db,seeds))changed=true;if(applyOrderDefaults(db,seeds,defaults))changed=true;return changed;
+ if(ensureNumbers(db,seeds))changed=true;if(applyOrderDefaults(db,seeds,defaults))changed=true;if(applyCurriculumUpdate(db,seeds))changed=true;return changed;
 }
 function validateExtras(db){
+ if(db.curriculumUpdate!==undefined&&(!Number.isSafeInteger(db.curriculumUpdate)||db.curriculumUpdate<1))throw Error('Invalid curriculum update marker.');
  if(db.appliedOrderDefaults!==undefined&&(typeof db.appliedOrderDefaults!=='string'||db.appliedOrderDefaults.length>100))throw Error('Invalid numbering update marker.');
  if(db.contentOrder!==undefined&&(!Array.isArray(db.contentOrder)||new Set(db.contentOrder).size!==db.contentOrder.length||db.contentOrder.some(id=>typeof id!=='string'||!/^(custom-[a-f0-9-]+|new-[a-z0-9-]+|[0-9]+)$/.test(id))))throw Error('Invalid content order.');
  if(db.topics!==undefined&&(!Array.isArray(db.topics)||db.topics.length>200||db.topics.some(t=>typeof t!=='string'||!t.trim()||t.length>80)))throw Error('Invalid topic catalogue.');
- for(const c of db.content||[]){if(c.topics!==undefined)validTopics(c.topics);if(c.type!==undefined&&!['skill','checklist'].includes(c.type))throw Error('Invalid learning item type.');}
+ for(const c of db.content||[]){if(c.topics!==undefined)validTopics(c.topics);if(c.type!==undefined&&!['skill','checklist','understanding'].includes(c.type))throw Error('Invalid learning item type.');}
  if(db.itemNumbers!==undefined){if(!db.itemNumbers||typeof db.itemNumbers!=='object'||Array.isArray(db.itemNumbers))throw Error('Invalid item numbers.');const used=new Set();for(const[id,n]of Object.entries(db.itemNumbers)){if(!/^(custom-[a-f0-9-]+|new-[a-z0-9-]+|[0-9]+)$/.test(id)||!Number.isSafeInteger(n)||n<1||used.has(n))throw Error('Invalid or duplicate item number.');used.add(n);}}
 }
 module.exports={topicsOf,validTopics,normalise,items,complete,progress,upgrade,ensureNumbers,applyOrderDefaults,validateExtras};

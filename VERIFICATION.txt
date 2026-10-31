@@ -1,86 +1,9 @@
-ONLINE VERSION 6.0 - PRE-DEPLOYMENT VERIFICATION
+Update 8 verification
 
-Passed automated application checks:
-- Current revision-22 backup inspected in memory; all 34 original items renumbered to match its saved order.
-- All 34 New staff onboarding topic assignments preserved, together with existing system topics.
-- Original backup bytes, accounts, records and history unchanged during compatibility checks.
-- Staff trainer selector returns only active account names/usernames while staff learning records remain private.
-- Staff trainer name resolved on the server; spoofed actor/trainer text ignored.
-- Typed Other trainer name required and saved; unavailable/disabled trainers rejected.
-- Trainer metadata validated on restore; legacy trainer text remains supported.
-- Trainer details survive full backup/restore and restart.
-- One-time original-content alignment does not reset later manual ordering/numbering on restart.
-- Full shared/archived content list available to managers and administrators; staff cannot use bulk management.
-- Bulk add, replace and remove topics validated as one transaction; mixed valid/invalid selections make no changes.
-- Archive and restore retain staff learning records and restore completion status.
-- Shared content ordering and optional renumbering survive restart and full backup/restore.
-- Personal item numbers remain unchanged during shared renumbering; personal learning cannot be bulk changed.
-- Duplicate or incomplete order lists and stale revisions are rejected.
-- Invalid duplicate content order in a backup is rejected.
-- Earlier revision-13 category grouping retained; superseded by revision-22 assignments for this update.
-- Nine shared topic assignments retained; Pharmacy X grouping and combined Pharmland Porto and Cliniko grouping match the backup.
-- Empty Cliniko and Safe dispensing entries removed; original backup file unchanged.
-- Current backup accounts, records and history unchanged during in-memory migration.
-- Downloadable project includes only sanitised topic assignments; no real accounts, password hashes or operational data.
-- Stable unique item numbers across edits, topic renaming, new items, restart and restore.
-- Duplicate item numbers rejected during backup validation.
-- Existing empty topic metadata removed; assigned topic names and records preserved.
-- Only empty topics can be removed through Manage topics.
-- Existing completed SOP sign-off carried into Done status with notes/history intact.
-- Account holder can record their own sharing consent; managers can view it.
-- Supplied backup inspected in memory: account, record and history fields unchanged; no private backup data saved into the project.
-- 34 curriculum items: seven account-setup checkboxes, a PharmSmart SOP checkbox and 26 step-based skills.
-- All supplied system training prompts, required patient fields and BH31* search tip included.
-- Manager topic creation/rename and multiple topic assignments per item.
-- Server-calculated topic completion and in-progress counts.
-- Reassigning or renaming topics keeps sign-offs, notes and shared completion intact.
-- Multi-topic items count in each topic, once in the overall item count.
-- Existing single-topic databases migrate while retaining credentials and learning records.
-- Backups restore topics, assignments, checkbox status and step-based learning.
-- Private setup key and explicit first-time initialisation.
-- Manager and administrator access to all staff records, including personal learning, notes and sign-offs.
-- Staff see only their own accounts, learning records and personal content.
-- Managers add and edit shared learning. Staff add personal learning.
-- Any recommended step can be signed off independently and in any order.
-- Conflicting changes are rejected instead of overwriting newer records.
-- Full backup and validated restore preserve content, accounts and learning records.
-- Older offline backups and historical records for removed cards remain supported.
-- Accounts, personal learning and sign-offs persist after a local server restart.
-- Restore revokes sessions.
-- Production configuration rejects an incorrect DATA_DIR.
+Passed: latest saved curriculum migration, 40 default shared items, existing account/record/history preservation, stable content IDs, one-time renumbering, custom shared content retention and fixed personal item numbers.
+Passed: two understanding steps, trainer selection, unrestricted final sign-off, rejection of removed practice step on understanding items, legacy final completion retention, backup restore and restart.
+Passed: started and completed topic totals, dashboard display and first introduction topic. Browser checked staff dashboard, introduction and two-step sign-off.
+Passed: updated label PDF exact bytes, authenticated guide access, shared library bulk edit/archive/restore/order, revision conflicts, privacy controls, storage mount guards and production HTTPS/origin/session checks.
+ZIP checked: no runtime data, private backups, account hashes/salts or test credentials. Only Update 8 numbered instructions included.
 
-Storage guard tests with simulated Linux mount information:
-- Unmounted data directory refused.
-- Missing previously initialised database refused.
-- Existing production database without the matching app marker refused.
-- Empty storage without explicit first-use authorisation refused.
-- Existing marked storage opens without setup enabled.
-
-Production HTTP configuration tests using isolated local storage:
-- HTTPS redirection and secure session cookie flags.
-- Cross-origin and missing-origin POST requests rejected.
-- Setup closes once an administrator exists.
-- Protected records require authentication.
-- Security response headers present.
-
-Browser review:
-- Original content appears in the revision-22 order with matching numbers.
-- Who is the trainer? offers active staff names and Other.
-- Other displays a trainer-name input; saved sign-off shows Trainer separately from Signed off by.
-- Content list displays numbered rows, topic/status filters, details/edit and selection controls.
-- Multiple selected topics are applied and visible in the updated rows.
-- Draft move up/down and before/after reference preview work; saving updates order and references.
-- Order dialog keeps Save and Cancel visible while its rows scroll.
-- Manager Team records lists all accounts.
-- Individual staff learning/history opens from Team records.
-- Search by item number opens the exact numbered content; SOP item is a Done / Not done checkbox.
-- Topic Dashboard opens after sign-in; Account setup appears first.
-- Account checkbox saves Done and updates overall/topic counts.
-- Content editor saves multiple checked topics without losing completion.
-- Recommended sign-off buttons remain independently available.
-
-Not yet verified:
-- Actual GitHub upload, Render deployment, TLS, attached disk or persistence across a real Render redeploy. These need the new repository/service to exist.
-- Real-device phone testing; responsive layouts are included.
-
-The full ZIP excludes all runtime data, test accounts, backups and credentials. Existing offline data was not copied into the online package or modified. Delivery Desk was not modified.
+These are local checks. Live Render deployment and persistent disk redeploy are not performed in this workspace.
