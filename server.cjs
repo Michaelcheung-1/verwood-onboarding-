@@ -6,7 +6,7 @@ const skills=JSON.parse(fs.readFileSync(path.join(__dirname,'skills.json'))),ses
 const learning=require('./learning.cjs'),trainers=require('./trainers.cjs'),orderDefaults=require('./curriculum-order.json');
 if(db.accounts.length&&learning.upgrade(db,skills,orderDefaults)){db.revision++;db.history.push({actor:'System update',username:'system',target:'everyone',action:'Updated learning steps, content and item numbers; existing learning records preserved',at:new Date().toISOString()});save();}
 const allSkills=()=>learning.items(db,skills);
-const preferredTopics=['How to use this site','Account setup','Pharmacy X','Square Up','Slack','MedPoint','Pharmland Porto','Cliniko','Order Delivery Desk','PharmSmart'];
+const preferredTopics=['How to use this site','Account setup','Pharmacy X','Square Up','Slack','MedPoint','Pharmland Porto','Cliniko','Order Delivery Desk','PharmSmart','NHS','Customer service'];
 const topicCatalogue=()=>[...new Set([...(db.topics||[]),...allSkills().filter(s=>!s.archived&&s.scope!=='personal').flatMap(learning.topicsOf)])].sort((a,b)=>(preferredTopics.includes(a)?preferredTopics.indexOf(a):100)-(preferredTopics.includes(b)?preferredTopics.indexOf(b):100));
 const visibleSkills=(actor,owner)=>allSkills().filter(s=>!s.archived&&(s.scope!=='personal'||s.owner===owner)&&(actor.role!=='staff'||owner===actor.username));
 const clean=a=>({username:a.username,name:a.name,role:a.role,disabled:!!a.disabled}),hash=(p,s)=>crypto.scryptSync(p,s,64).toString('hex');

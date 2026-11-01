@@ -1,0 +1,17 @@
+UPDATE 9 - STOCK TASKS, NHS AND CUSTOMER SERVICE
+
+Upload the CONTENTS of the extracted Verwood-Onboarding-Online folder to the root of your existing onboarding GitHub repository, replacing matching files. Commit, then in the onboarding Render service choose Manual Deploy > Deploy latest commit.
+
+Keep your existing persistent disk and DATA_DIR=/var/lib/verwood-onboarding. Do not initialise storage. No backup restore is needed. Do not change Delivery Desk.
+
+NEW LEARNING ITEMS
+Pharmacy X: Carry out a shelf audit; Scan in deliveries and existing stock; Add stock in bulk.
+Square Up: Scan in deliveries.
+New NHS topic: Use the Rx Entry Tracker.
+New Customer service topic: Hand out a prescription.
+
+All six items use the three recommended practical learning steps and are also assigned to New staff onboarding. Any step can be signed off in any order. The first step allows staff trainer selection or an Other name.
+
+On sites already using Update 8, existing numbers and manual order are retained. The six items receive the next available numbers, normally #041-#046, and appear in their assigned topic lists. Custom items may mean higher numbers. Existing staff records, categories and content edits are retained. Managers can arrange the full content list as usual.
+
+After deployment: sign in and check all six items, the NHS and Customer service topic boxes and progress totals. Download a fresh backup. This package has not been deployed to your live site.

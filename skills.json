@@ -487,5 +487,77 @@
     "type": "checklist",
     "requiresSelf": true,
     "archived": false
+  },
+  {
+    "id": "new-px-shelf-audit",
+    "title": "Carry out a shelf audit",
+    "text": "Learn how to carry out a shelf audit in Pharmacy X. Work through the agreed shelf or section, check the stock against the system, and follow the pharmacy's process for recording and resolving differences.",
+    "category": "Pharmacy X",
+    "topics": [
+      "Pharmacy X",
+      "New staff onboarding"
+    ],
+    "type": "skill",
+    "archived": false
+  },
+  {
+    "id": "new-px-stock-scan",
+    "title": "Scan in deliveries and existing stock",
+    "text": "Learn how to scan deliveries and existing stock into Pharmacy X. Check that the correct items and quantities are recorded, and ask a colleague how to handle items that do not scan or do not match the expected stock.",
+    "category": "Pharmacy X",
+    "topics": [
+      "Pharmacy X",
+      "New staff onboarding"
+    ],
+    "type": "skill",
+    "archived": false
+  },
+  {
+    "id": "new-px-bulk-stock",
+    "title": "Add stock in bulk",
+    "text": "Learn how to add stock in bulk in Pharmacy X. Ask a colleague to demonstrate the agreed process, check the items and quantities before saving, and confirm that the stock records have updated correctly.",
+    "category": "Pharmacy X",
+    "topics": [
+      "Pharmacy X",
+      "New staff onboarding"
+    ],
+    "type": "skill",
+    "archived": false
+  },
+  {
+    "id": "new-square-deliveries",
+    "title": "Scan in deliveries",
+    "text": "Learn how to scan deliveries into Square Up. Follow the pharmacy's process for receiving stock, check the items and quantities, and report any differences or items that cannot be scanned.",
+    "category": "Square Up",
+    "topics": [
+      "Square Up",
+      "New staff onboarding"
+    ],
+    "type": "skill",
+    "archived": false
+  },
+  {
+    "id": "new-nhs-rx-tracker",
+    "title": "Use the Rx Entry Tracker",
+    "text": "Learn how to use the Rx Entry Tracker in the NHS workflow. Ask a colleague to explain what to record, what each status means, and when entries should be updated. Keep entries accurate and up to date using the pharmacy's agreed process.",
+    "category": "NHS",
+    "topics": [
+      "NHS",
+      "New staff onboarding"
+    ],
+    "type": "skill",
+    "archived": false
+  },
+  {
+    "id": "new-customer-handout",
+    "title": "Hand out a prescription",
+    "text": "Learn the pharmacy's prescription hand-out procedure, including the required identity checks, collection checks and when to refer to the pharmacist. Ask a colleague to demonstrate the process and practise with their support. Follow the current pharmacy SOP.",
+    "category": "Customer service",
+    "topics": [
+      "Customer service",
+      "New staff onboarding"
+    ],
+    "type": "skill",
+    "archived": false
   }
 ]

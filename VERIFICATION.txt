@@ -1,9 +1,1 @@
-Update 8 verification
-
-Passed: latest saved curriculum migration, 40 default shared items, existing account/record/history preservation, stable content IDs, one-time renumbering, custom shared content retention and fixed personal item numbers.
-Passed: two understanding steps, trainer selection, unrestricted final sign-off, rejection of removed practice step on understanding items, legacy final completion retention, backup restore and restart.
-Passed: started and completed topic totals, dashboard display and first introduction topic. Browser checked staff dashboard, introduction and two-step sign-off.
-Passed: updated label PDF exact bytes, authenticated guide access, shared library bulk edit/archive/restore/order, revision conflicts, privacy controls, storage mount guards and production HTTPS/origin/session checks.
-ZIP checked: no runtime data, private backups, account hashes/salts or test credentials. Only Update 8 numbered instructions included.
-
-These are local checks. Live Render deployment and persistent disk redeploy are not performed in this workspace.
+Update 9: passed content validation for six additions, 46 default items, topic totals, existing numbering/order/content edits/records retained and idempotent update. JavaScript syntax checked. ZIP checked for only current instructions and absence of private runtime/account data. Local HTTP verification was unavailable because loopback connections were blocked. No live deployment performed. Existing UI and learning-step behavior are unchanged from Update 8.

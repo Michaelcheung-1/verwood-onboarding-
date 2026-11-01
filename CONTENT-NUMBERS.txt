@@ -1,4 +1,4 @@
-Default shared numbering (custom/personal items may affect numbers):
+Default shared numbering (existing custom or personal items may affect numbers):
 #001 How to use this site
 #002 Understand dispensing workflow
 #003 One basket, one patient
@@ -39,3 +39,9 @@ Default shared numbering (custom/personal items may affect numbers):
 #038 Log expired stock in PharmSmart
 #039 Sign off SOPs in PharmSmart
 #040 Consent: do not share work accounts outside the company
+#041 Carry out a shelf audit
+#042 Scan in deliveries and existing stock
+#043 Add stock in bulk
+#044 Scan in deliveries
+#045 Use the Rx Entry Tracker
+#046 Hand out a prescription
