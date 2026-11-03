@@ -14,7 +14,7 @@ module.exports=function applyLibraryChange(db,seeds,actor,b){
  if(!['topics','archive','restore'].includes(b.action))throw Error('Choose a content-list action.');
  let topics;if(b.action==='topics'){
   if(!['replace','add','remove'].includes(b.mode))throw Error('Choose replace, add or remove topics.');
-  topics=learning.validTopics(b.topics);
+  topics=learning.validTopics(b.topics);if(selected.some(s=>s.type==='review'))throw Error('Performance reviews stay in the Performance review topic and are separate from onboarding.');
   if(selected.some(s=>s.archived))throw Error('Restore archived items before changing their topics.');
  }
  const at=new Date().toISOString();

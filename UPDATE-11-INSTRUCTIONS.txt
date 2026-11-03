@@ -1,0 +1,14 @@
+UPDATE 11 - PERFORMANCE REVIEW FOR EVERYONE
+
+Deploy the CONTENTS of this website folder to your existing onboarding GitHub repository, commit, then Render > Manual Deploy > Deploy latest commit. Keep your persistent disk and DATA_DIR. Do not initialise storage or restore a full backup.
+
+Every staff member can now open Performance review from the dashboard. A shared Your performance review template has a separate record for each staff member. Managers/admins can select a person and edit the four review fields. Staff can read only their own record. The template is assigned ONLY to Performance review, never New staff onboarding. Existing numbers, records and Pauline's six private review areas are kept.
+
+If Pauline's private import was already completed, do not repeat it. If not, the separate private import supplied with Update 10 still works: administrator > Backup & restore > Import a private review account. Keep that private file out of GitHub.
+
+No live deployment has been performed. Only the latest update instructions are included.
+
+REVISED UPDATE 11
+This replaces the earlier Update 11 pack and can be deployed directly over Update 10. Review actions, support and deadline/review dates each have an independent sign-off button for the staff member or manager/admin. Sign-offs record the actor and UK date/time. Blank fields must be populated by a manager first. Editing a signed field clears only that field's sign-off; the history retains earlier sign-off activity.
+
+Expected targets are general and no longer have fixed calendar dates. Existing review deadline fields remain intact and can be set by the manager. A one-time update removes fixed By [date] phrases from existing review standards. The revised separate private import also has general targets. If Pauline has already been imported, do not import her again.

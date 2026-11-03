@@ -559,5 +559,16 @@
     ],
     "type": "skill",
     "archived": false
+  },
+  {
+    "id": "new-team-performance-review",
+    "title": "Your performance review",
+    "text": "Use this review with your manager to discuss expected standards, any performance concerns, agreed improvement actions, support and deadlines. Your manager can record your individual review in the fields below. Each staff member has a separate review record; staff can view only their own review, while managers and administrators can review all staff records.",
+    "type": "review",
+    "topics": [
+      "Performance review"
+    ],
+    "category": "Performance review",
+    "archived": false
   }
 ]
