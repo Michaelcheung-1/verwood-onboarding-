@@ -1,0 +1,15 @@
+UPDATE 10 - SIGN-OFF TIMES AND PRIVATE PERFORMANCE REVIEWS
+
+1. Upload the CONTENTS of the extracted Verwood-Onboarding-Online folder to your existing onboarding GitHub repository. Replace matching files, commit, then use Render > Manual Deploy > Deploy latest commit. Keep your existing persistent disk and DATA_DIR=/var/lib/verwood-onboarding. Do not initialise storage. Do not change Delivery Desk.
+
+2. Sign in as an administrator. Open Backup & restore, then find Import a private review account. Choose the SEPARATE file Pauline-Private-Account-and-Reviews.json and click Import account and private reviews. Do not use the full-backup Restore form. The import adds one new staff account and six personal performance reviews, keeping all existing data. If username pauline already exists, the import stops without changing it.
+
+3. Pauline can sign in using username pauline and the initial password requested in this chat. Her account is created only after step 2. Managers and administrators can select Pauline in Team records / Learning to view and edit the review. Other staff cannot see her review content or records. Pauline can read her review; manager/admin updates are required for expected standards and the four review fields.
+
+4. Keep the separate private JSON safe. It contains account password hashes and private employment review information. Do not upload it to GitHub or put it in this website folder.
+
+The Performance review topic uses expected standards and four fields: Performance concern, Agreed improvement actions, Support, Deadline / review dates. It does not use skill sign-off steps or a completion checkbox. A saved review counts as started/in progress; it has no automatic completion target. Existing learning steps retain their original records. Signed steps now show a disabled Signed off button, followed by the recorded actor, date and time in UK time.
+
+Source clarification required: dispensing milestones extend to 31 December 2026 but the source review column calls 1 December the final target. Both are noted in the private review for the manager to resolve. The stock-check time limit was not specified in the source and must be agreed by the manager.
+
+No full backup restore is needed. No live deployment or live account creation has been performed by this package. Only the latest numbered update instructions are included.

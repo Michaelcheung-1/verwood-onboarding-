@@ -3,3 +3,5 @@
 .item-number{display:inline-block;background:#e7efdf;border:1px solid #c9d9bd;color:#345c34;font-size:17px;letter-spacing:.5px;border-radius:7px;padding:5px 8px;vertical-align:middle;margin-right:6px;white-space:nowrap}
 
 .steps.two-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.started-summary,.stat>small{display:block;font-size:15px;line-height:1.5;margin-top:12px}.stat{max-width:290px;flex-shrink:0}@media(max-width:650px){.steps.two-steps{grid-template-columns:1fr}.stat{max-width:none}}
+
+.review-field{padding:14px 18px;border:1px solid #d9e3dc;border-radius:10px;margin:12px 0;background:#f7f9f5}.review-fields>small{display:block;line-height:1.6;margin-top:12px}

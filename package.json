@@ -1,10 +1,10 @@
 {
   "name": "verwood-onboarding-online",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "private": true,
   "scripts": {
     "start": "node server.cjs",
-    "check": "node --check server.cjs && node --check storage.cjs && node --check learning.cjs && node --check library.cjs && node --check trainers.cjs && node --check public/app.js && node --check public/library.js"
+    "check": "node --check server.cjs && node --check storage.cjs && node --check learning.cjs && node --check library.cjs && node --check trainers.cjs && node --check public/app.js && node --check public/library.js && node --check reviews.cjs"
   },
   "engines": {
     "node": ">=20"
