@@ -12,7 +12,7 @@ function ensureNumbers(db,seeds){
  return changed;
 }
 function complete(item,record){if(item.type==='review')return false;return item.type==='checklist'?record?.done===true:!!record?.steps?.some(s=>s.step===3);}
-function progress(list,records){const topics=[...new Set(list.flatMap(topicsOf))];return topics.map(name=>{const assigned=list.filter(s=>topicsOf(s).includes(name)),done=assigned.filter(s=>complete(s,records[s.id])).length,started=assigned.filter(s=>!complete(s,records[s.id])&&(records[s.id]?.steps?.length||records[s.id]?.done===true||records[s.id]?.review)).length;return{name,total:assigned.length,done,started,startedTotal:done+started,percent:assigned.length?Math.round(done/assigned.length*100):0};});}
+function progress(list,records){const topics=[...new Set(list.flatMap(topicsOf))];return topics.map(name=>{const assigned=list.filter(s=>topicsOf(s).includes(name)),done=assigned.filter(s=>complete(s,records[s.id])).length,started=assigned.filter(s=>!complete(s,records[s.id])&&(records[s.id]?.steps?.length||records[s.id]?.done===true||records[s.id]?.review||records[s.id]?.reviewLogs?.length)).length;return{name,total:assigned.length,done,started,startedTotal:done+started,percent:assigned.length?Math.round(done/assigned.length*100):0};});}
 function applyOrderDefaults(db,seeds,defaults){
  if(!defaults||db.appliedOrderDefaults===defaults.version)return false;
  const all=items(db,seeds),shared=all.filter(s=>s.scope!=='personal'),requested=defaults.contentOrder.filter(id=>shared.some(s=>s.id===id));

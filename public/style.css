@@ -5,3 +5,5 @@
 .steps.two-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.started-summary,.stat>small{display:block;font-size:15px;line-height:1.5;margin-top:12px}.stat{max-width:290px;flex-shrink:0}@media(max-width:650px){.steps.two-steps{grid-template-columns:1fr}.stat{max-width:none}}
 
 .review-field{padding:14px 18px;border:1px solid #d9e3dc;border-radius:10px;margin:12px 0;background:#f7f9f5}.review-fields>small{display:block;line-height:1.6;margin-top:12px}
+
+.review-list{width:100%;border-collapse:collapse;margin:22px 0;table-layout:fixed}.review-list caption{text-align:left;font-size:20px;font-weight:700;margin:12px 0}.review-list th,.review-list td{padding:15px;border:1px solid #c8d5ce;text-align:left;vertical-align:top;white-space:pre-wrap;overflow-wrap:anywhere}.review-list th{width:30%;background:#edf3eb}.review-log{border-left:4px solid #94b58c;padding:10px 18px;background:#f5f8f2;margin:14px 0}.review-log p{white-space:pre-wrap}.review-log small{display:block;line-height:1.6}@media(max-width:650px){.review-list th,.review-list td{padding:10px;font-size:16px}.review-list th{width:36%}}

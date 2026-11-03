@@ -1,0 +1,14 @@
+UPDATE 12 - TWO-COLUMN REVIEWS AND COMMENT LOGS
+
+Deploy the CONTENTS of this folder to your onboarding GitHub repository, commit, then Render > Manual Deploy > Deploy latest commit. Keep your persistent disk and DATA_DIR. Do not initialise storage or restore a full backup. Includes all previous updates, so you can deploy directly from Update 10 or 11.
+
+Each target area now has a two-column table: Title and Content. Rows: Performance concern, Expected standard, Agreed improvement actions, Support, Deadline / review dates. Review sign-off buttons have been removed. Existing sign-off data is retained in backups/history.
+
+Below each target area, add multiple review logs. The commentator name and date/time come from the signed-in account. Staff can comment only on their own review; managers/admins can comment on any staff review. Comments are append-only. Performance review remains separate from New staff onboarding.
+
+UPDATE PAULINE FROM THE ORIGINAL WORD DOCUMENT
+After deployment, sign in as administrator > Backup & restore > Apply a private review file. Choose the separately supplied Pauline-Original-Document-Review-Update.json. This applies the six original Word table rows, including the original targets and dates, to Pauline only. If her account exists, its password and details are kept. If missing, it creates the prepared account. Previous review fields are kept in Previous review versions; comments and earlier learning records stay in place. Applying the same document file again is safe and does not overwrite later edits.
+
+The original source has an inconsistent final dispensing deadline (1 December in the review column and 31 December in the target column); this update preserves the source wording for management to resolve. No revised dates or targets are invented.
+
+Keep the private JSON out of GitHub. No live deployment or live profile change has been made by this package. Only the latest numbered update instructions are included.
